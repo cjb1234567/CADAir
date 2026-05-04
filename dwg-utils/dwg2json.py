@@ -84,4 +84,4 @@ def dwg_to_json(dwg_path, json_path):
 
 if __name__ == "__main__":
     
-    dwg_to_json("your_design.dwg", "output.json")
+    dwg_to_json("../20260123.dwg", "output.json")

@@ -5,10 +5,39 @@ build/
 dist/
 wheels/
 *.egg-info
+secret
 
 # Virtual environments
 .venv
+.venv-*
+venv/
 
-# Project-specific
+# Environment variables
+.env
+
+# IDE/Editor
 .qoder/
-output.json
+.claude/
+.opencode/
+.vscode/
+.idea/
+.agents/
+
+# Data files (large)
+data/*
+!data/*.sample.dwg
+!data/*.sample.dxf
+!data/.gitkeep
+
+# ODA File Converter AppImage
+*.AppImage
+
+# Log files
+*.log
+translation.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

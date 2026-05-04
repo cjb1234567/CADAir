@@ -13,7 +13,7 @@ except ImportError:
 from dwgtranslator import TranslationManager, TranslationEngineFactory
 from dwgtranslator.plugins.baidu import AsyncBaiduGeneralTranslator, AsyncBaiduFieldTranslator
 
-
+print(f"当前工作目录: {os.getcwd()}")
 async def async_translate_demo():
     """异步翻译演示"""
     print("=" * 50)
@@ -32,7 +32,7 @@ async def async_translate_demo():
     domain = os.getenv("TRANSLATE_DOMAIN", "machinery")
     qps = float(os.getenv("TRANSLATE_QPS", "5"))
     target_lang = os.getenv("TRANSLATE_TARGET", "en")
-    source_lang = os.getenv("TRANSLATE_SOURCE", "zh")
+    source_lang = os.getenv("TRANSLATE_SOURCE", "auto")
     use_general = os.getenv("TRANSLATE_USE_GENERAL", "y").lower() == "y"
     
     # Fallback to input if not set
@@ -86,7 +86,7 @@ async def async_translate_demo():
         input_file = sys.argv[1]
     else:
         # 默认路径
-        input_file = "data/20260123.dwg"
+        input_file = "data/lineweights.sample.dwg"
     
     if not os.path.exists(input_file):
         print(f"错误: 文件不存在: {input_file}")

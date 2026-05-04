@@ -24,10 +24,11 @@ class DWGCore:
             if os.name == 'nt':
                 ezdxf.options.set("odafc-addon", "win_exec_path", self.oda_path)
             else:
-                # Linux使用lin_exec_path
                 ezdxf.options.set("odafc-addon", "lin_exec_path", self.oda_path)
-                # 检查是否需要xvfb
                 self._use_xvfb = self._check_needs_xvfb()
+                os.environ['XDG_RUNTIME_DIR'] = '/tmp/runtime-chongjibo'
+                os.environ['LIBGL_ALWAYS_SOFTWARE'] = '1'
+                os.makedirs('/tmp/runtime-chongjibo', exist_ok=True)
             print(f"ODA已配置: {self.oda_path}")
         else:
             print(f"警告: ODA路径不存在: {self.oda_path}")
@@ -76,6 +77,7 @@ class DWGCore:
             
             env = os.environ.copy()
             env['XDG_RUNTIME_DIR'] = '/tmp/runtime-chongjibo'
+            env['LIBGL_ALWAYS_SOFTWARE'] = '1'
             os.makedirs('/tmp/runtime-chongjibo', exist_ok=True)
             
             # 根据环境自动决定是否使用xvfb

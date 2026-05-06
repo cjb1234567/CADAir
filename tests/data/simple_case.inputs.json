@@ -1,0 +1,19 @@
+{
+  "dwg": {
+    "path": "tests/data/simple_case.dwg",
+    "exists": true,
+    "size_bytes": 268701
+  },
+  "oda_dxf": {
+    "path": "tests/data/simple_case.oda.dxf",
+    "exists": true,
+    "size_bytes": 2061347,
+    "dxfversion": "AC1021",
+    "layouts": [
+      "Model",
+      "布局1",
+      "布局2"
+    ],
+    "block_count": 58
+  }
+}

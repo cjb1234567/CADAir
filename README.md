@@ -14,6 +14,12 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - ✅ **In-Memory Translation Cache** — Avoid duplicate API calls, auto deduplicate identical texts
 - ✅ **Async Translation with Concurrency Control** — QPS limiting, max concurrent requests
 - ✅ **Environment Variables Support** — Configure via `.env` file
+- ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG output and patches ODA DXF text directly
+
+## Documentation
+
+- [Work Summary: DWG Translation Roundtrip Fix](docs/WORK_SUMMARY_2026-05-06.md)
+- [TODO](docs/TODO.md)
 
 ## Requirements
 
@@ -89,25 +95,27 @@ manager = TranslationManager(oda_path="/path/to/ODAFileConverter.AppImage")
 
 ```
 CADAir/
+├── docs/                   # Work summaries and TODOs
 ├── dwgtranslator/          # Modular DWG translation package
 │   ├── __init__.py
-│   ├── core.py            # DWG/DXF I/O, encoding, fonts
-│   ├── extract.py         # 3-position text extraction
-│   ├── writeback.py       # Translated text writer
+│   ├── core.py            # DWG/DXF I/O, ODA conversion, encoding, fonts
+│   ├── extract.py         # Text extraction, including raw DXF MULTILEADER supplement
+│   ├── writeback.py       # Translated text writer and direct DXF patcher
 │   ├── translator.py      # Translation engine ABC + Factory
 │   ├── manager.py         # Workflow manager (Facade)
 │   └── plugins/
 │       ├── __init__.py
 │       └── baidu.py       # Baidu Translation API plugins
+├── dwg-utils/              # Standalone DWG/DXF utilities
+│   ├── dwg_to_dxf.py      # Direct ODA DWG to DXF converter
+│   ├── dwg2json.py
+│   └── text_reader.py
 ├── data/                   # DWG/DXF/JSON data files
 │   ├── 20260123.dwg       # Sample DWG
 │   ├── your_design.dwg    # Sample DWG
 │   ├── output.dxf         # Translated DXF
 │   ├── output.json        # Geometry export JSON
 │   └── translation_work.json  # Translation workflow
-├── main.py                 # DWG → JSON geometry converter
-├── text_reader.py          # Text extraction examples
-├── example.py              # Translation usage examples
 ├── pyproject.toml
 └── README.md
 ```
@@ -149,11 +157,24 @@ dwgtranslator/
 
 | Module | Key Responsibilities |
 |--------|----------------------|
-| `core.py` | Read/write DWG/DXF, R2007 encoding upgrade, Chinese font config |
-| `extract.py` | Extract from: layouts, block definitions, INSERT attributes |
-| `writeback.py` | Write translations, auto-adjust text width |
+| `core.py` | Read DWG/DXF, run ODA conversion, track ODA-generated DXF for non-roundtrip output |
+| `extract.py` | Extract from layouts, block definitions, INSERT attributes, MTEXT, and raw DXF MULTILEADER group code `304` |
+| `writeback.py` | Write translations and directly patch ODA DXF text without full `ezdxf.saveas()` for DWG input |
 | `translator.py` | ABC, Mock implementation, factory for engine registration |
 | `manager.py` | Orchestrate: extract → translate → write-back |
+
+### DWG Output Compatibility
+
+For DWG input, the final DXF output intentionally avoids a full `ezdxf` save roundtrip.
+
+The workflow is:
+
+1. ODA File Converter creates a viewer-compatible base DXF.
+2. `ezdxf` is used for safe extraction.
+3. Missing complex `MULTILEADER` text is supplemented from raw DXF group code `304`.
+4. The translated text is patched directly into the ODA DXF by entity handle.
+
+This preserves complex `MULTILEADER` arrows, labels, proxy graphics, and context data that some CAD viewers rely on. See [the work summary](docs/WORK_SUMMARY_2026-05-06.md) for the root-cause analysis and verification details.
 
 ### Available Translation Engines
 
@@ -236,7 +257,7 @@ asyncio.run(manager.translate_file_async(
 
 **Run async example**:
 ```bash
-python examples/baidu_async_translate.py
+uv run python examples/baidu_async_translate.py data/20260123.dwg
 ```
 
 *Performance benchmark: 20 texts with 100ms simulated delay - sync: 2.0s, async: 0.45s (4.4x speedup)*
@@ -288,16 +309,21 @@ stats = manager.get_cache_stats()
 
 ```
 CADAir/
+├── docs/                   # Work summaries and TODOs
 ├── dwgtranslator/          # Translation package
 │   ├── __init__.py
-│   ├── core.py            # DWG/DXF I/O, encoding, fonts
-│   ├── extract.py         # Text extraction
-│   ├── writeback.py       # Text write-back
+│   ├── core.py            # DWG/DXF I/O and ODA conversion
+│   ├── extract.py         # Text extraction, including raw MULTILEADER supplement
+│   ├── writeback.py       # Text write-back and direct DXF patching
 │   ├── translator.py      # Translation engine ABC + Factory
 │   ├── manager.py         # Workflow facade
 │   └── plugins/
 │       ├── __init__.py
 │       └── baidu.py       # Baidu Translation API plugins
+├── dwg-utils/              # Standalone utilities
+│   ├── dwg_to_dxf.py      # ODA direct converter
+│   ├── dwg2json.py
+│   └── text_reader.py
 ├── data/                   # All DWG/DXF/JSON data files
 │   ├── 20260123.dwg
 │   ├── your_design.dwg
@@ -316,8 +342,8 @@ CADAir/
 │   ├── custom_translator.py # Custom translation function
 │   ├── list_engines.py    # List available translation engines
 │   └── run_all.py         # Run all examples
-├── text_reader.py          # Text extraction examples
 ├── pyproject.toml
 ├── uv.lock
+├── TODO.md                 # Pointer to docs/TODO.md
 └── README.md
 ```

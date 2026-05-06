@@ -1,4 +1,6 @@
 import json
+import os
+import re
 from ezdxf.document import Drawing
 from typing import Dict, Any, Optional
 
@@ -50,6 +52,13 @@ class TextWriter:
             elif dxftype == 'ATTRIB':
                 entity.dxf.text = translated_text
             
+            elif dxftype == 'MULTILEADER':
+                try:
+                    if entity.has_mtext:
+                        entity.mtext.text = translated_text
+                except Exception:
+                    pass
+            
             return True
             
         except Exception as e:
@@ -71,3 +80,87 @@ class TextWriter:
         
         print(f"成功写回 {success}/{len(self.translated_bundles)} 条文本")
         return success
+
+    def patch_dxf_file(self, source_path: str, output_path: str) -> int:
+        """直接修改DXF文本，不通过ezdxf重新保存整个文件。"""
+        if not self.translated_bundles:
+            print("没有翻译数据可写回")
+            return 0
+
+        with open(source_path, 'r', encoding='utf-8', errors='surrogateescape', newline='') as f:
+            lines = f.readlines()
+
+        entity_ranges = self._index_entity_ranges(lines)
+        success = 0
+
+        for handle, data in self.translated_bundles.items():
+            entity_range = entity_ranges.get(str(handle).upper())
+            if not entity_range:
+                continue
+
+            if self._patch_entity_lines(lines, entity_range, data):
+                success += 1
+
+        os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8', errors='surrogateescape', newline='') as f:
+            f.writelines(lines)
+
+        print(f"成功直接补丁写回 {success}/{len(self.translated_bundles)} 条文本")
+        return success
+
+    def _index_entity_ranges(self, lines):
+        ranges = {}
+        current_start = None
+        current_handle = None
+        line_count = len(lines)
+
+        for i in range(0, line_count - 1, 2):
+            code = lines[i].strip()
+            value = lines[i + 1].strip()
+
+            if code == '0':
+                if current_start is not None and current_handle:
+                    ranges[current_handle] = (current_start, i)
+                current_start = i
+                current_handle = None
+            elif current_start is not None and code == '5' and current_handle is None:
+                current_handle = value.upper()
+
+        if current_start is not None and current_handle:
+            ranges[current_handle] = (current_start, line_count)
+
+        return ranges
+
+    def _patch_entity_lines(self, lines, entity_range, data: Dict[str, Any]) -> bool:
+        translated_text = data.get('translated') or data.get('content')
+        if not translated_text:
+            return False
+
+        start, end = entity_range
+        entity_type = data.get('type')
+
+        if entity_type in {'TEXT', 'ATTRIB'}:
+            encoded = self._single_line_text(translated_text)
+            return self._replace_first_group_value(lines, start, end, {'1'}, encoded)
+        if entity_type == 'MTEXT':
+            encoded = self._mtext_value(translated_text)
+            return self._replace_first_group_value(lines, start, end, {'1'}, encoded)
+        if entity_type == 'MULTILEADER':
+            encoded = self._mtext_value(translated_text)
+            return self._replace_first_group_value(lines, start, end, {'304'}, encoded)
+
+        return False
+
+    def _replace_first_group_value(self, lines, start: int, end: int, codes, value: str) -> bool:
+        newline = '\r\n' if lines[start].endswith('\r\n') else '\n'
+        for i in range(start, end - 1, 2):
+            if lines[i].strip() in codes:
+                lines[i + 1] = str(value) + newline
+                return True
+        return False
+
+    def _single_line_text(self, value: str) -> str:
+        return re.sub(r'[\r\n]+', ' ', str(value)).strip()
+
+    def _mtext_value(self, value: str) -> str:
+        return str(value).replace('\r\n', '\\P').replace('\r', '\\P').replace('\n', '\\P')

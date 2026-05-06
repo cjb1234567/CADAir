@@ -1,9 +1,12 @@
 import os
 import sys
 import subprocess
+import shutil
+import tempfile
 import ezdxf
 from ezdxf.addons import odafc
 from ezdxf.document import Drawing
+from pathlib import Path
 from typing import Optional
 
 
@@ -16,6 +19,7 @@ class DWGCore:
         
         self.oda_path = oda_path
         self._use_xvfb = False
+        self.last_converted_dxf: Optional[str] = None
         self._setup_oda()
     
     def _setup_oda(self):
@@ -39,15 +43,11 @@ class DWGCore:
     
     def read(self, file_path: str) -> Optional[Drawing]:
         """读取DWG/DXF文件"""
+        self.last_converted_dxf = None
         try:
             if file_path.lower().endswith('.dwg'):
                 print(f"正在转换并读取 DWG: {file_path}")
-                try:
-                    return odafc.readfile(file_path)
-                except odafc.UnknownODAFCError:
-                    # ODAFC在Linux下可能因为MESA警告而误判失败
-                    # 尝试直接手动转换
-                    return self._manual_dwg_to_dxf(file_path)
+                return self._manual_dwg_to_dxf(file_path)
             else:
                 print(f"正在读取 DXF: {file_path}")
                 return ezdxf.readfile(file_path)
@@ -57,13 +57,29 @@ class DWGCore:
     
     def _manual_dwg_to_dxf(self, dwg_path: str) -> Optional[Drawing]:
         """手动调用ODA转换DWG到DXF"""
-        import tempfile
-        import subprocess
-        from pathlib import Path
-        
-        infile = Path(dwg_path).absolute()
+        dxf_path = self.convert_dwg_to_dxf(dwg_path)
+        if not dxf_path:
+            return None
+
+        self.last_converted_dxf = dxf_path
+        return ezdxf.readfile(dxf_path)
+
+    def convert_dwg_to_dxf(self, dwg_path: str, output_path: Optional[str] = None) -> Optional[str]:
+        """使用ODA直接转换DWG到DXF，返回转换后的DXF路径。"""
+        infile = Path(dwg_path).expanduser().resolve()
+        if not infile.exists():
+            print(f"DWG文件不存在: {dwg_path}")
+            return None
+
+        if output_path:
+            final_path = Path(output_path).expanduser().resolve()
+            final_path.parent.mkdir(parents=True, exist_ok=True)
+        else:
+            fd, temp_name = tempfile.mkstemp(prefix=f"{infile.stem}_", suffix=".dxf")
+            os.close(fd)
+            final_path = Path(temp_name)
+
         with tempfile.TemporaryDirectory(prefix="odafc_") as tmp_dir:
-            # 构建ODA参数
             args = [
                 self.oda_path,
                 str(infile.parent),
@@ -81,7 +97,7 @@ class DWGCore:
             os.makedirs('/tmp/runtime-chongjibo', exist_ok=True)
             
             # 根据环境自动决定是否使用xvfb
-            if self._use_xvfb:
+            if self._use_xvfb and shutil.which('xvfb-run'):
                 cmd = ['xvfb-run', '-a'] + args
             else:
                 cmd = args
@@ -95,10 +111,10 @@ class DWGCore:
                     timeout=60
                 )
                 
-                # 检查输出文件
                 out_file = Path(tmp_dir) / infile.with_suffix('.dxf').name
                 if out_file.exists():
-                    return ezdxf.readfile(str(out_file))
+                    shutil.copy2(out_file, final_path)
+                    return str(final_path)
                 else:
                     print(f"转换后的文件未找到，stderr: {result.stderr[:200]}")
                     return None

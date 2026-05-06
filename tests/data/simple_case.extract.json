@@ -1,0 +1,5910 @@
+{
+  "5ECE": {
+    "handle": "5ECE",
+    "content": "ON/OFF",
+    "type": "TEXT",
+    "container": "Block(工业插排)"
+  },
+  "604B": {
+    "handle": "604B",
+    "content": "PE2",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "604C": {
+    "handle": "604C",
+    "content": "左侧",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "604D": {
+    "handle": "604D",
+    "content": "Earth bus接地铜排",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "604E": {
+    "handle": "604E",
+    "content": "PE1",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "607D": {
+    "handle": "607D",
+    "content": "45U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "607E": {
+    "handle": "607E",
+    "content": "40U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "607F": {
+    "handle": "607F",
+    "content": "35U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6080": {
+    "handle": "6080",
+    "content": "30U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6081": {
+    "handle": "6081",
+    "content": "25U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6082": {
+    "handle": "6082",
+    "content": "20U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6083": {
+    "handle": "6083",
+    "content": "15U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6084": {
+    "handle": "6084",
+    "content": "10U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6085": {
+    "handle": "6085",
+    "content": "5U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6086": {
+    "handle": "6086",
+    "content": "0U",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "6087": {
+    "handle": "6087",
+    "content": "后视图",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "608B": {
+    "handle": "608B",
+    "content": "端子",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "608C": {
+    "handle": "608C",
+    "content": "右侧",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "608D": {
+    "handle": "608D",
+    "content": "端子",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60DA": {
+    "handle": "60DA",
+    "content": "-ZMD",
+    "plain_content": "-ZMD",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60DB": {
+    "handle": "60DB",
+    "content": "-MKG",
+    "plain_content": "-MKG",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60DC": {
+    "handle": "60DC",
+    "content": "ZAK1",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60DD": {
+    "handle": "60DD",
+    "content": "外置空开盒",
+    "plain_content": "外置空开盒",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60DE": {
+    "handle": "60DE",
+    "content": "ZJK",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60DF": {
+    "handle": "60DF",
+    "content": "ZDK2",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60E0": {
+    "handle": "60E0",
+    "content": "ZAK2",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60E1": {
+    "handle": "60E1",
+    "content": "ZDK1",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60E2": {
+    "handle": "60E2",
+    "content": "-PDU1",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60E3": {
+    "handle": "60E3",
+    "content": "-PDU2",
+    "type": "TEXT",
+    "container": "Block(TG8后视素体)"
+  },
+  "60EF": {
+    "handle": "60EF",
+    "content": "XAC1",
+    "plain_content": "XAC1",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F0": {
+    "handle": "60F0",
+    "content": "XAC2",
+    "plain_content": "XAC2",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F1": {
+    "handle": "60F1",
+    "content": "XJD",
+    "plain_content": "XJD",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F2": {
+    "handle": "60F2",
+    "content": "XDC1",
+    "plain_content": "XDC1",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F3": {
+    "handle": "60F3",
+    "content": "XDC2",
+    "plain_content": "XDC2",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F4": {
+    "handle": "60F4",
+    "content": "XBA1",
+    "plain_content": "XBA1",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F5": {
+    "handle": "60F5",
+    "content": "XBA2",
+    "plain_content": "XBA2",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F6": {
+    "handle": "60F6",
+    "content": "XBJ",
+    "plain_content": "XBJ",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F7": {
+    "handle": "60F7",
+    "content": "XBD1",
+    "plain_content": "XBD1",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F8": {
+    "handle": "60F8",
+    "content": "XBD2",
+    "plain_content": "XBD2",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "60F9": {
+    "handle": "60F9",
+    "content": "XPE",
+    "plain_content": "XPE",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "6286": {
+    "handle": "6286",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "6288": {
+    "handle": "6288",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "628A": {
+    "handle": "628A",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "628C": {
+    "handle": "628C",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "628E": {
+    "handle": "628E",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "6290": {
+    "handle": "6290",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U10)"
+  },
+  "6326": {
+    "handle": "6326",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "6328": {
+    "handle": "6328",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "632A": {
+    "handle": "632A",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "632C": {
+    "handle": "632C",
+    "content": "同步异常",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "632E": {
+    "handle": "632E",
+    "content": "采样异常",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "6332": {
+    "handle": "6332",
+    "content": "级联异常",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "6334": {
+    "handle": "6334",
+    "content": "GOOSE异常",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "6336": {
+    "handle": "6336",
+    "content": "检修不一致",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "6338": {
+    "handle": "6338",
+    "content": "I母刀闸合位",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "633A": {
+    "handle": "633A",
+    "content": "II母刀闸合位",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "633C": {
+    "handle": "633C",
+    "content": "压切取I母",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "633E": {
+    "handle": "633E",
+    "content": "压切取II母",
+    "type": "TEXT",
+    "container": "Block(合智合并单元前面板)"
+  },
+  "66D2": {
+    "handle": "66D2",
+    "content": "ON",
+    "plain_content": "ON",
+    "type": "MTEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "66D3": {
+    "handle": "66D3",
+    "content": "{\\C256;OFF}",
+    "plain_content": "OFF",
+    "type": "MTEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "66D4": {
+    "handle": "66D4",
+    "content": "PWR2",
+    "plain_content": "PWR2",
+    "type": "MTEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "66D5": {
+    "handle": "66D5",
+    "content": "PWR1",
+    "plain_content": "PWR1",
+    "type": "MTEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6703": {
+    "handle": "6703",
+    "content": "PWR1",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6704": {
+    "handle": "6704",
+    "content": "PWR2",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6705": {
+    "handle": "6705",
+    "content": "ALARM",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6706": {
+    "handle": "6706",
+    "content": "SYS",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6707": {
+    "handle": "6707",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6708": {
+    "handle": "6708",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6709": {
+    "handle": "6709",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670A": {
+    "handle": "670A",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670B": {
+    "handle": "670B",
+    "content": "9",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670C": {
+    "handle": "670C",
+    "content": "11",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670D": {
+    "handle": "670D",
+    "content": "13",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670E": {
+    "handle": "670E",
+    "content": "15",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "670F": {
+    "handle": "670F",
+    "content": "17",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6710": {
+    "handle": "6710",
+    "content": "19",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6711": {
+    "handle": "6711",
+    "content": "21",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6712": {
+    "handle": "6712",
+    "content": "23",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6713": {
+    "handle": "6713",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6714": {
+    "handle": "6714",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6715": {
+    "handle": "6715",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6716": {
+    "handle": "6716",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6717": {
+    "handle": "6717",
+    "content": "10",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6718": {
+    "handle": "6718",
+    "content": "12",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6719": {
+    "handle": "6719",
+    "content": "14",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671A": {
+    "handle": "671A",
+    "content": "16",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671B": {
+    "handle": "671B",
+    "content": "18",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671C": {
+    "handle": "671C",
+    "content": "20",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671D": {
+    "handle": "671D",
+    "content": "22",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671E": {
+    "handle": "671E",
+    "content": "24",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "671F": {
+    "handle": "671F",
+    "content": "25",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6720": {
+    "handle": "6720",
+    "content": "26",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6721": {
+    "handle": "6721",
+    "content": "27",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "6722": {
+    "handle": "6722",
+    "content": "28",
+    "type": "TEXT",
+    "container": "Block(兆越2428前面板)"
+  },
+  "67EA": {
+    "handle": "67EA",
+    "content": "ETH1",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67EB": {
+    "handle": "67EB",
+    "content": "ETH2",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67EC": {
+    "handle": "67EC",
+    "content": "ETH3",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67ED": {
+    "handle": "67ED",
+    "content": "ETH4",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67EE": {
+    "handle": "67EE",
+    "content": "ETH5",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67EF": {
+    "handle": "67EF",
+    "content": "ETH6",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F0": {
+    "handle": "67F0",
+    "content": "ETH7",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F1": {
+    "handle": "67F1",
+    "content": "ETH8",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F2": {
+    "handle": "67F2",
+    "content": "ETH9",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F3": {
+    "handle": "67F3",
+    "content": "ETH10",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F4": {
+    "handle": "67F4",
+    "content": "ETH11",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "67F5": {
+    "handle": "67F5",
+    "content": "ETH12",
+    "type": "TEXT",
+    "container": "Block(12口LC光纤配线架)"
+  },
+  "6AA0": {
+    "handle": "6AA0",
+    "content": "序号",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA1": {
+    "handle": "6AA1",
+    "content": "工厂件",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA4": {
+    "handle": "6AA4",
+    "content": "物料编码",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA5": {
+    "handle": "6AA5",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA6": {
+    "handle": "6AA6",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA7": {
+    "handle": "6AA7",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA8": {
+    "handle": "6AA8",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AA9": {
+    "handle": "6AA9",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAA": {
+    "handle": "6AAA",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAB": {
+    "handle": "6AAB",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAC": {
+    "handle": "6AAC",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAD": {
+    "handle": "6AAD",
+    "content": "9",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAE": {
+    "handle": "6AAE",
+    "content": "10",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AAF": {
+    "handle": "6AAF",
+    "content": "11",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB0": {
+    "handle": "6AB0",
+    "content": "12",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB1": {
+    "handle": "6AB1",
+    "content": "13",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB2": {
+    "handle": "6AB2",
+    "content": "14",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB3": {
+    "handle": "6AB3",
+    "content": "15",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB4": {
+    "handle": "6AB4",
+    "content": "16",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB5": {
+    "handle": "6AB5",
+    "content": "17",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB6": {
+    "handle": "6AB6",
+    "content": "18",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB7": {
+    "handle": "6AB7",
+    "content": "19",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB8": {
+    "handle": "6AB8",
+    "content": "20",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AB9": {
+    "handle": "6AB9",
+    "content": "21",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ABA": {
+    "handle": "6ABA",
+    "content": "22",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ABB": {
+    "handle": "6ABB",
+    "content": "23",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ABC": {
+    "handle": "6ABC",
+    "content": "24",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ABF": {
+    "handle": "6ABF",
+    "content": "设备标识符",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AD8": {
+    "handle": "6AD8",
+    "content": "工厂供机柜",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AD9": {
+    "handle": "6AD9",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ADA": {
+    "handle": "6ADA",
+    "content": "名称",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ADB": {
+    "handle": "6ADB",
+    "content": "TG8机柜",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ADD": {
+    "handle": "6ADD",
+    "content": "型号",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6ADF": {
+    "handle": "6ADF",
+    "content": "制造商",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE1": {
+    "handle": "6AE1",
+    "content": "数量",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE2": {
+    "handle": "6AE2",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE3": {
+    "handle": "6AE3",
+    "content": "TG8",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE4": {
+    "handle": "6AE4",
+    "content": "南瑞",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE5": {
+    "handle": "6AE5",
+    "content": "-TG8",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE6": {
+    "handle": "6AE6",
+    "content": "工厂供ML-300MA",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE7": {
+    "handle": "6AE7",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE8": {
+    "handle": "6AE8",
+    "content": "LED照明灯",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AE9": {
+    "handle": "6AE9",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AEA": {
+    "handle": "6AEA",
+    "content": "ML-300MA",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AEB": {
+    "handle": "6AEB",
+    "content": "Common",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AEC": {
+    "handle": "6AEC",
+    "content": "-ZMD",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AED": {
+    "handle": "6AED",
+    "content": "工厂供门控开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AEE": {
+    "handle": "6AEE",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AEF": {
+    "handle": "6AEF",
+    "content": "门控开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF0": {
+    "handle": "6AF0",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF1": {
+    "handle": "6AF1",
+    "content": "门控开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF2": {
+    "handle": "6AF2",
+    "content": "南瑞",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF3": {
+    "handle": "6AF3",
+    "content": "-MKG",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF4": {
+    "handle": "6AF4",
+    "content": "工厂供703698951",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF5": {
+    "handle": "6AF5",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF6": {
+    "handle": "6AF6",
+    "content": "电源分配单元",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF7": {
+    "handle": "6AF7",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF8": {
+    "handle": "6AF8",
+    "content": "NKP-DY-U-32a",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AF9": {
+    "handle": "6AF9",
+    "content": "科佳",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFA": {
+    "handle": "6AFA",
+    "content": "-PDU1；-PDU2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFB": {
+    "handle": "6AFB",
+    "content": "工厂供703769119",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFC": {
+    "handle": "6AFC",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFD": {
+    "handle": "6AFD",
+    "content": "交流空气开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFE": {
+    "handle": "6AFE",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6AFF": {
+    "handle": "6AFF",
+    "content": "iC65N 2P C 6A",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B00": {
+    "handle": "6B00",
+    "content": "施耐德",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B01": {
+    "handle": "6B01",
+    "content": "ZJK",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B02": {
+    "handle": "6B02",
+    "content": "工厂供703769164",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B03": {
+    "handle": "6B03",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B04": {
+    "handle": "6B04",
+    "content": "交流空气开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B05": {
+    "handle": "6B05",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B06": {
+    "handle": "6B06",
+    "content": "iC65N 2P C 20A",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B07": {
+    "handle": "6B07",
+    "content": "施耐德",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B08": {
+    "handle": "6B08",
+    "content": "ZAK1；ZAK2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B09": {
+    "handle": "6B09",
+    "content": "工厂供直流开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0A": {
+    "handle": "6B0A",
+    "content": "YES",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0B": {
+    "handle": "6B0B",
+    "content": "直流空气开关",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0C": {
+    "handle": "6B0C",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0D": {
+    "handle": "6B0D",
+    "content": "iC65H DC 2P C 10A",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0E": {
+    "handle": "6B0E",
+    "content": "施耐德",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "6B0F": {
+    "handle": "6B0F",
+    "content": "ZDK1；ZDK2",
+    "type": "TEXT",
+    "container": "Block(屏柜材料清单)"
+  },
+  "72EF": {
+    "handle": "72EF",
+    "content": "ETH0",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F0": {
+    "handle": "72F0",
+    "content": "ETH1",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F1": {
+    "handle": "72F1",
+    "content": "ETH2",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F2": {
+    "handle": "72F2",
+    "content": "ETH3",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F3": {
+    "handle": "72F3",
+    "content": "ETH4",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F4": {
+    "handle": "72F4",
+    "content": "CONSOLE",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F5": {
+    "handle": "72F5",
+    "content": "USB",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F8": {
+    "handle": "72F8",
+    "content": "SFP2",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "72F9": {
+    "handle": "72F9",
+    "content": "SFP1",
+    "type": "TEXT",
+    "container": "Block(科东千兆纵密前面板)"
+  },
+  "731C": {
+    "handle": "731C",
+    "content": "远动装置  SJ30-664-2U",
+    "type": "TEXT",
+    "container": "Block(水电2U664远动前面板)"
+  },
+  "7510": {
+    "handle": "7510",
+    "content": "-TG8",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7542": {
+    "handle": "7542",
+    "content": "前视图",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7543": {
+    "handle": "7543",
+    "content": "45U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7544": {
+    "handle": "7544",
+    "content": "40U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7545": {
+    "handle": "7545",
+    "content": "35U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7546": {
+    "handle": "7546",
+    "content": "30U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7547": {
+    "handle": "7547",
+    "content": "25U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7548": {
+    "handle": "7548",
+    "content": "20U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "7549": {
+    "handle": "7549",
+    "content": "15U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "754A": {
+    "handle": "754A",
+    "content": "10U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "754B": {
+    "handle": "754B",
+    "content": "5U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "754C": {
+    "handle": "754C",
+    "content": "0U",
+    "type": "TEXT",
+    "container": "Block(TG8前视素体)"
+  },
+  "78A4": {
+    "handle": "78A4",
+    "content": "CON",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78A5": {
+    "handle": "78A5",
+    "content": "PFP",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78A6": {
+    "handle": "78A6",
+    "content": "0",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78E9": {
+    "handle": "78E9",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78EA": {
+    "handle": "78EA",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78EB": {
+    "handle": "78EB",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78EC": {
+    "handle": "78EC",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78ED": {
+    "handle": "78ED",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78EE": {
+    "handle": "78EE",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78EF": {
+    "handle": "78EF",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78F0": {
+    "handle": "78F0",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "78F1": {
+    "handle": "78F1",
+    "content": "9",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "7954": {
+    "handle": "7954",
+    "content": "USB",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "7957": {
+    "handle": "7957",
+    "content": "RUN",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "7958": {
+    "handle": "7958",
+    "content": "ALM",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "7959": {
+    "handle": "7959",
+    "content": "PWR1",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "795A": {
+    "handle": "795A",
+    "content": "PWR0",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "795B": {
+    "handle": "795B",
+    "content": "SLOT1",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "795C": {
+    "handle": "795C",
+    "content": "SLOT2",
+    "type": "TEXT",
+    "container": "Block(G$CEC9DB7B8)"
+  },
+  "7C53": {
+    "handle": "7C53",
+    "content": "CON",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C54": {
+    "handle": "7C54",
+    "content": "PFP",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C55": {
+    "handle": "7C55",
+    "content": "0",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C98": {
+    "handle": "7C98",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C99": {
+    "handle": "7C99",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9A": {
+    "handle": "7C9A",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9B": {
+    "handle": "7C9B",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9C": {
+    "handle": "7C9C",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9D": {
+    "handle": "7C9D",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9E": {
+    "handle": "7C9E",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7C9F": {
+    "handle": "7C9F",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7CA0": {
+    "handle": "7CA0",
+    "content": "9",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D03": {
+    "handle": "7D03",
+    "content": "USB",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D06": {
+    "handle": "7D06",
+    "content": "RUN",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D07": {
+    "handle": "7D07",
+    "content": "ALM",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D08": {
+    "handle": "7D08",
+    "content": "PWR1",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D09": {
+    "handle": "7D09",
+    "content": "PWR0",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D0A": {
+    "handle": "7D0A",
+    "content": "SLOT1",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "7D0B": {
+    "handle": "7D0B",
+    "content": "SLOT2",
+    "type": "TEXT",
+    "container": "Block(兆越3936前面板)"
+  },
+  "824C": {
+    "handle": "824C",
+    "content": "标签框",
+    "type": "TEXT",
+    "container": "Block(标签框)"
+  },
+  "8585": {
+    "handle": "8585",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "8587": {
+    "handle": "8587",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "8589": {
+    "handle": "8589",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "858B": {
+    "handle": "858B",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "858D": {
+    "handle": "858D",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "858F": {
+    "handle": "858F",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U28)"
+  },
+  "85D9": {
+    "handle": "85D9",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "85DB": {
+    "handle": "85DB",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "85DD": {
+    "handle": "85DD",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "85DF": {
+    "handle": "85DF",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "85E1": {
+    "handle": "85E1",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "85E3": {
+    "handle": "85E3",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U29)"
+  },
+  "871E": {
+    "handle": "871E",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8720": {
+    "handle": "8720",
+    "content": "事件记录",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8721": {
+    "handle": "8721",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8722": {
+    "handle": "8722",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8723": {
+    "handle": "8723",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8725": {
+    "handle": "8725",
+    "content": "设  计",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8728": {
+    "handle": "8728",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "872A": {
+    "handle": "872A",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "872C": {
+    "handle": "872C",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "872D": {
+    "handle": "872D",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "872F": {
+    "handle": "872F",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8730": {
+    "handle": "8730",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8731": {
+    "handle": "8731",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8734": {
+    "handle": "8734",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8736": {
+    "handle": "8736",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8738": {
+    "handle": "8738",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "873A": {
+    "handle": "873A",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "873C": {
+    "handle": "873C",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "873D": {
+    "handle": "873D",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "873F": {
+    "handle": "873F",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8741": {
+    "handle": "8741",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8744": {
+    "handle": "8744",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8746": {
+    "handle": "8746",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "874A": {
+    "handle": "874A",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "874C": {
+    "handle": "874C",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "874E": {
+    "handle": "874E",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "874F": {
+    "handle": "874F",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8752": {
+    "handle": "8752",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8753": {
+    "handle": "8753",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8755": {
+    "handle": "8755",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8757": {
+    "handle": "8757",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8758": {
+    "handle": "8758",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "875A": {
+    "handle": "875A",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "875D": {
+    "handle": "875D",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8762": {
+    "handle": "8762",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8763": {
+    "handle": "8763",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8764": {
+    "handle": "8764",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8765": {
+    "handle": "8765",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8766": {
+    "handle": "8766",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8767": {
+    "handle": "8767",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8769": {
+    "handle": "8769",
+    "content": "工程名称：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "876A": {
+    "handle": "876A",
+    "content": "技术参数：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "876B": {
+    "handle": "876B",
+    "content": "受控性质：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "876C": {
+    "handle": "876C",
+    "content": "发放编号：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8771": {
+    "handle": "8771",
+    "content": "订单行号：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8772": {
+    "handle": "8772",
+    "content": "说明：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8773": {
+    "handle": "8773",
+    "content": "通讯方式：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8774": {
+    "handle": "8774",
+    "content": "图纸编号：",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8775": {
+    "handle": "8775",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8776": {
+    "handle": "8776",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8777": {
+    "handle": "8777",
+    "content": "以太网",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8778": {
+    "handle": "8778",
+    "content": "河北省承德市双滦区100MW/400MWh混合储能示范项目磷酸铁锂储能设备采购项目",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "877F": {
+    "handle": "877F",
+    "content": "N/A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8780": {
+    "handle": "8780",
+    "content": "N/A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8781": {
+    "handle": "8781",
+    "content": "N/A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8782": {
+    "handle": "8782",
+    "content": "N/A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8783": {
+    "handle": "8783",
+    "content": "N/A",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8786": {
+    "handle": "8786",
+    "content": "校  核",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8787": {
+    "handle": "8787",
+    "content": "审  核",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8788": {
+    "handle": "8788",
+    "content": "批  准",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8789": {
+    "handle": "8789",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U3)"
+  },
+  "878B": {
+    "handle": "878B",
+    "content": "20251023 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "878C": {
+    "handle": "878C",
+    "content": "共1页",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "878D": {
+    "handle": "878D",
+    "content": "101",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "878E": {
+    "handle": "878E",
+    "content": "封面",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "878F": {
+    "handle": "878F",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8790": {
+    "handle": "8790",
+    "content": "封面",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8791": {
+    "handle": "8791",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8792": {
+    "handle": "8792",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U3)"
+  },
+  "8B8F": {
+    "handle": "8B8F",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(A$Cc6de6895)"
+  },
+  "8F03": {
+    "handle": "8F03",
+    "content": "70P",
+    "type": "TEXT",
+    "container": "Block(A$C2ac3dfe8)"
+  },
+  "8F80": {
+    "handle": "8F80",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(A$Cc7343b3c)"
+  },
+  "96E7": {
+    "handle": "96E7",
+    "content": "-SCM2",
+    "type": "TEXT",
+    "container": "Block(A$C0cc4f316)"
+  },
+  "97A8": {
+    "handle": "97A8",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97AA": {
+    "handle": "97AA",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97AC": {
+    "handle": "97AC",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97AD": {
+    "handle": "97AD",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97AF": {
+    "handle": "97AF",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97B0": {
+    "handle": "97B0",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97B1": {
+    "handle": "97B1",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97B4": {
+    "handle": "97B4",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97B6": {
+    "handle": "97B6",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97B8": {
+    "handle": "97B8",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97BA": {
+    "handle": "97BA",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97BC": {
+    "handle": "97BC",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97BD": {
+    "handle": "97BD",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97BF": {
+    "handle": "97BF",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97C1": {
+    "handle": "97C1",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97C4": {
+    "handle": "97C4",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97C6": {
+    "handle": "97C6",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97CA": {
+    "handle": "97CA",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97CC": {
+    "handle": "97CC",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97CE": {
+    "handle": "97CE",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97CF": {
+    "handle": "97CF",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97D2": {
+    "handle": "97D2",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97D3": {
+    "handle": "97D3",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97D5": {
+    "handle": "97D5",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97D7": {
+    "handle": "97D7",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97D8": {
+    "handle": "97D8",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97DA": {
+    "handle": "97DA",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97DD": {
+    "handle": "97DD",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E2": {
+    "handle": "97E2",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E3": {
+    "handle": "97E3",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E4": {
+    "handle": "97E4",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E5": {
+    "handle": "97E5",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E6": {
+    "handle": "97E6",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E7": {
+    "handle": "97E7",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97E9": {
+    "handle": "97E9",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97ED": {
+    "handle": "97ED",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U4)"
+  },
+  "97EF": {
+    "handle": "97EF",
+    "content": "20260115 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97F0": {
+    "handle": "97F0",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "97F1": {
+    "handle": "97F1",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U4)"
+  },
+  "9C75": {
+    "handle": "9C75",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C77": {
+    "handle": "9C77",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C79": {
+    "handle": "9C79",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C7A": {
+    "handle": "9C7A",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C7C": {
+    "handle": "9C7C",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C7D": {
+    "handle": "9C7D",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C7E": {
+    "handle": "9C7E",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C81": {
+    "handle": "9C81",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C83": {
+    "handle": "9C83",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C85": {
+    "handle": "9C85",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C87": {
+    "handle": "9C87",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C89": {
+    "handle": "9C89",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C8A": {
+    "handle": "9C8A",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C8C": {
+    "handle": "9C8C",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C8E": {
+    "handle": "9C8E",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C91": {
+    "handle": "9C91",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C93": {
+    "handle": "9C93",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C97": {
+    "handle": "9C97",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C99": {
+    "handle": "9C99",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C9B": {
+    "handle": "9C9B",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C9C": {
+    "handle": "9C9C",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9C9F": {
+    "handle": "9C9F",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CA0": {
+    "handle": "9CA0",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CA2": {
+    "handle": "9CA2",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CA4": {
+    "handle": "9CA4",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CA5": {
+    "handle": "9CA5",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CA7": {
+    "handle": "9CA7",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CAA": {
+    "handle": "9CAA",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CAF": {
+    "handle": "9CAF",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB0": {
+    "handle": "9CB0",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB1": {
+    "handle": "9CB1",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB2": {
+    "handle": "9CB2",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB3": {
+    "handle": "9CB3",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB4": {
+    "handle": "9CB4",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CB6": {
+    "handle": "9CB6",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CBA": {
+    "handle": "9CBA",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U41)"
+  },
+  "9CBC": {
+    "handle": "9CBC",
+    "content": "20260115 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CBD": {
+    "handle": "9CBD",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9CBE": {
+    "handle": "9CBE",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U41)"
+  },
+  "9D6B": {
+    "handle": "9D6B",
+    "content": "101",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D6C": {
+    "handle": "9D6C",
+    "content": "1 page in total",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D74": {
+    "handle": "9D74",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D75": {
+    "handle": "9D75",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D76": {
+    "handle": "9D76",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D78": {
+    "handle": "9D78",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D79": {
+    "handle": "9D79",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D7B": {
+    "handle": "9D7B",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D7D": {
+    "handle": "9D7D",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D7E": {
+    "handle": "9D7E",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D7F": {
+    "handle": "9D7F",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9D83": {
+    "handle": "9D83",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DB6": {
+    "handle": "9DB6",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DBC": {
+    "handle": "9DBC",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC0": {
+    "handle": "9DC0",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC1": {
+    "handle": "9DC1",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC2": {
+    "handle": "9DC2",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC3": {
+    "handle": "9DC3",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC4": {
+    "handle": "9DC4",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC6": {
+    "handle": "9DC6",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC7": {
+    "handle": "9DC7",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DC8": {
+    "handle": "9DC8",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DCA": {
+    "handle": "9DCA",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DCB": {
+    "handle": "9DCB",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DCD": {
+    "handle": "9DCD",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DCF": {
+    "handle": "9DCF",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DD0": {
+    "handle": "9DD0",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DD1": {
+    "handle": "9DD1",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DD5": {
+    "handle": "9DD5",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DD6": {
+    "handle": "9DD6",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DDC": {
+    "handle": "9DDC",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE0": {
+    "handle": "9DE0",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE1": {
+    "handle": "9DE1",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE2": {
+    "handle": "9DE2",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE3": {
+    "handle": "9DE3",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE4": {
+    "handle": "9DE4",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE7": {
+    "handle": "9DE7",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DE8": {
+    "handle": "9DE8",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DEA": {
+    "handle": "9DEA",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DEB": {
+    "handle": "9DEB",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DED": {
+    "handle": "9DED",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DEF": {
+    "handle": "9DEF",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DF0": {
+    "handle": "9DF0",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DF1": {
+    "handle": "9DF1",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DF5": {
+    "handle": "9DF5",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DF6": {
+    "handle": "9DF6",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DFB": {
+    "handle": "9DFB",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DFC": {
+    "handle": "9DFC",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9DFF": {
+    "handle": "9DFF",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E01": {
+    "handle": "9E01",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E02": {
+    "handle": "9E02",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E04": {
+    "handle": "9E04",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E06": {
+    "handle": "9E06",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E07": {
+    "handle": "9E07",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E08": {
+    "handle": "9E08",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E09": {
+    "handle": "9E09",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E10": {
+    "handle": "9E10",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E11": {
+    "handle": "9E11",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E22": {
+    "handle": "9E22",
+    "content": "Pre server cabinet # 1 for energy management system",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E23": {
+    "handle": "9E23",
+    "content": "Pre server cabinet # 2 for energy management system",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E24": {
+    "handle": "9E24",
+    "content": "Energy Management System Application Server Cabinet # 3",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E25": {
+    "handle": "9E25",
+    "content": "Energy Management System Data Server Cabinet # 4",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E26": {
+    "handle": "9E26",
+    "content": "Energy Management System Coordination Control Cabinet # 5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E27": {
+    "handle": "9E27",
+    "content": "Remote control timing cabinet # 7",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E2B": {
+    "handle": "9E2B",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E2C": {
+    "handle": "9E2C",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E2D": {
+    "handle": "9E2D",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E2E": {
+    "handle": "9E2E",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E2F": {
+    "handle": "9E2F",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E30": {
+    "handle": "9E30",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E3E": {
+    "handle": "9E3E",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E3F": {
+    "handle": "9E3F",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E53": {
+    "handle": "9E53",
+    "content": "133MW/760MWh energy storage project",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "9E5B": {
+    "handle": "9E5B",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A099": {
+    "handle": "A099",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A09C": {
+    "handle": "A09C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A09F": {
+    "handle": "A09F",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A0F4": {
+    "handle": "A0F4",
+    "content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A1F5": {
+    "handle": "A1F5",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(A$C3349f0e4)"
+  },
+  "A33C": {
+    "handle": "A33C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A352": {
+    "handle": "A352",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A35A": {
+    "handle": "A35A",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "A37C": {
+    "handle": "A37C",
+    "content": "所有屏柜光纤配线架ODF为后置，\\P正面为挡板",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，\n正面为挡板",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A6F1": {
+    "handle": "A6F1",
+    "content": "101",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6F2": {
+    "handle": "A6F2",
+    "content": "共2页",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6FA": {
+    "handle": "A6FA",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6FB": {
+    "handle": "A6FB",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6FC": {
+    "handle": "A6FC",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6FE": {
+    "handle": "A6FE",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A6FF": {
+    "handle": "A6FF",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A701": {
+    "handle": "A701",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A702": {
+    "handle": "A702",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A703": {
+    "handle": "A703",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A704": {
+    "handle": "A704",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A705": {
+    "handle": "A705",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A708": {
+    "handle": "A708",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A709": {
+    "handle": "A709",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A70F": {
+    "handle": "A70F",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A713": {
+    "handle": "A713",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A714": {
+    "handle": "A714",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A715": {
+    "handle": "A715",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A716": {
+    "handle": "A716",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A717": {
+    "handle": "A717",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A719": {
+    "handle": "A719",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A71A": {
+    "handle": "A71A",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A71C": {
+    "handle": "A71C",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A71D": {
+    "handle": "A71D",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A71F": {
+    "handle": "A71F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A720": {
+    "handle": "A720",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A721": {
+    "handle": "A721",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A722": {
+    "handle": "A722",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A725": {
+    "handle": "A725",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A726": {
+    "handle": "A726",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A72C": {
+    "handle": "A72C",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A730": {
+    "handle": "A730",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A731": {
+    "handle": "A731",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A732": {
+    "handle": "A732",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A733": {
+    "handle": "A733",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A734": {
+    "handle": "A734",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A736": {
+    "handle": "A736",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A737": {
+    "handle": "A737",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A739": {
+    "handle": "A739",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A73A": {
+    "handle": "A73A",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A73C": {
+    "handle": "A73C",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A73D": {
+    "handle": "A73D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A73E": {
+    "handle": "A73E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A73F": {
+    "handle": "A73F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A742": {
+    "handle": "A742",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A743": {
+    "handle": "A743",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A748": {
+    "handle": "A748",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A749": {
+    "handle": "A749",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A74B": {
+    "handle": "A74B",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A74C": {
+    "handle": "A74C",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A74E": {
+    "handle": "A74E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A74F": {
+    "handle": "A74F",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A751": {
+    "handle": "A751",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A752": {
+    "handle": "A752",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A753": {
+    "handle": "A753",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A754": {
+    "handle": "A754",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A756": {
+    "handle": "A756",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A75B": {
+    "handle": "A75B",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A75C": {
+    "handle": "A75C",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A75E": {
+    "handle": "A75E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A760": {
+    "handle": "A760",
+    "content": "-RAID",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A762": {
+    "handle": "A762",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A764": {
+    "handle": "A764",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A766": {
+    "handle": "A766",
+    "content": "能量管理系统前置服务器柜#1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A767": {
+    "handle": "A767",
+    "content": "能量管理系统前置服务器柜#2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A768": {
+    "handle": "A768",
+    "content": "能量管理系统应用服务器柜#4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A769": {
+    "handle": "A769",
+    "content": "能量管理系统数据服务器柜#5",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A76A": {
+    "handle": "A76A",
+    "content": "能量管理系统协调控制器柜#6",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A76B": {
+    "handle": "A76B",
+    "content": "远动对时柜#8",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A76F": {
+    "handle": "A76F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A770": {
+    "handle": "A770",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A771": {
+    "handle": "A771",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A772": {
+    "handle": "A772",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A773": {
+    "handle": "A773",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A774": {
+    "handle": "A774",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A776": {
+    "handle": "A776",
+    "content": "磁盘阵列",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A777": {
+    "handle": "A777",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A778": {
+    "handle": "A778",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A77A": {
+    "handle": "A77A",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A77B": {
+    "handle": "A77B",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A77D": {
+    "handle": "A77D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A77E": {
+    "handle": "A77E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A77F": {
+    "handle": "A77F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A780": {
+    "handle": "A780",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A783": {
+    "handle": "A783",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A784": {
+    "handle": "A784",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A78A": {
+    "handle": "A78A",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A78E": {
+    "handle": "A78E",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A78F": {
+    "handle": "A78F",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A790": {
+    "handle": "A790",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A791": {
+    "handle": "A791",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A792": {
+    "handle": "A792",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A794": {
+    "handle": "A794",
+    "content": "能量管理系统前置服务器柜#3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A796": {
+    "handle": "A796",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7A5": {
+    "handle": "A7A5",
+    "content": "-CCU1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7A6": {
+    "handle": "A7A6",
+    "content": "-YB1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7A7": {
+    "handle": "A7A7",
+    "content": "-CCU2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7AB": {
+    "handle": "A7AB",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7AC": {
+    "handle": "A7AC",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7AE": {
+    "handle": "A7AE",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B1": {
+    "handle": "A7B1",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B2": {
+    "handle": "A7B2",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B3": {
+    "handle": "A7B3",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B5": {
+    "handle": "A7B5",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B6": {
+    "handle": "A7B6",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B7": {
+    "handle": "A7B7",
+    "content": "能量管理系统协调控制器柜#7",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B8": {
+    "handle": "A7B8",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7B9": {
+    "handle": "A7B9",
+    "content": "102",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7BA": {
+    "handle": "A7BA",
+    "content": "共2页",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7C2": {
+    "handle": "A7C2",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7C4": {
+    "handle": "A7C4",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7C5": {
+    "handle": "A7C5",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7C7": {
+    "handle": "A7C7",
+    "content": "-YB2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7D2": {
+    "handle": "A7D2",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7D3": {
+    "handle": "A7D3",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7DD": {
+    "handle": "A7DD",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7DE": {
+    "handle": "A7DE",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7DF": {
+    "handle": "A7DF",
+    "content": "101",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7E0": {
+    "handle": "A7E0",
+    "content": "共1页",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7E8": {
+    "handle": "A7E8",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7E9": {
+    "handle": "A7E9",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7EA": {
+    "handle": "A7EA",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7EC": {
+    "handle": "A7EC",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7ED": {
+    "handle": "A7ED",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7EF": {
+    "handle": "A7EF",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7F0": {
+    "handle": "A7F0",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7F1": {
+    "handle": "A7F1",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7F2": {
+    "handle": "A7F2",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7F5": {
+    "handle": "A7F5",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A7FD": {
+    "handle": "A7FD",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A807": {
+    "handle": "A807",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A808": {
+    "handle": "A808",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A809": {
+    "handle": "A809",
+    "content": "-CCU1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A80A": {
+    "handle": "A80A",
+    "content": "-YB1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A80B": {
+    "handle": "A80B",
+    "content": "-CCU2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A80C": {
+    "handle": "A80C",
+    "content": "-YB2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A80F": {
+    "handle": "A80F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A810": {
+    "handle": "A810",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A816": {
+    "handle": "A816",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A81A": {
+    "handle": "A81A",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A81B": {
+    "handle": "A81B",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A81C": {
+    "handle": "A81C",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A81D": {
+    "handle": "A81D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A81E": {
+    "handle": "A81E",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A820": {
+    "handle": "A820",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A821": {
+    "handle": "A821",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A822": {
+    "handle": "A822",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A824": {
+    "handle": "A824",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A825": {
+    "handle": "A825",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A827": {
+    "handle": "A827",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A828": {
+    "handle": "A828",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A829": {
+    "handle": "A829",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A82A": {
+    "handle": "A82A",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A82D": {
+    "handle": "A82D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A82E": {
+    "handle": "A82E",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A834": {
+    "handle": "A834",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A838": {
+    "handle": "A838",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A839": {
+    "handle": "A839",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A83A": {
+    "handle": "A83A",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A83B": {
+    "handle": "A83B",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A83C": {
+    "handle": "A83C",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A83E": {
+    "handle": "A83E",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A83F": {
+    "handle": "A83F",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A841": {
+    "handle": "A841",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A842": {
+    "handle": "A842",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A844": {
+    "handle": "A844",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A845": {
+    "handle": "A845",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A846": {
+    "handle": "A846",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A847": {
+    "handle": "A847",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A84A": {
+    "handle": "A84A",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A84B": {
+    "handle": "A84B",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A850": {
+    "handle": "A850",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A851": {
+    "handle": "A851",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A853": {
+    "handle": "A853",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A854": {
+    "handle": "A854",
+    "content": "-SER1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A856": {
+    "handle": "A856",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A857": {
+    "handle": "A857",
+    "content": "-SER2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A859": {
+    "handle": "A859",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A85A": {
+    "handle": "A85A",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A85B": {
+    "handle": "A85B",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A85C": {
+    "handle": "A85C",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A85D": {
+    "handle": "A85D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A85F": {
+    "handle": "A85F",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A864": {
+    "handle": "A864",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A865": {
+    "handle": "A865",
+    "content": "-KVM",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A867": {
+    "handle": "A867",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A869": {
+    "handle": "A869",
+    "content": "-RAID",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A86A": {
+    "handle": "A86A",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A86B": {
+    "handle": "A86B",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A86E": {
+    "handle": "A86E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A870": {
+    "handle": "A870",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A872": {
+    "handle": "A872",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A874": {
+    "handle": "A874",
+    "content": "能量管理系统前置服务器柜#1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A875": {
+    "handle": "A875",
+    "content": "能量管理系统前置服务器柜#2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A876": {
+    "handle": "A876",
+    "content": "能量管理系统应用服务器柜#3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A877": {
+    "handle": "A877",
+    "content": "能量管理系统数据服务器柜#4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A878": {
+    "handle": "A878",
+    "content": "能量管理系统协调控制器柜#5",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A879": {
+    "handle": "A879",
+    "content": "远动对时柜#6",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A87D": {
+    "handle": "A87D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A87E": {
+    "handle": "A87E",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A87F": {
+    "handle": "A87F",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A880": {
+    "handle": "A880",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A881": {
+    "handle": "A881",
+    "content": "800*1000*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A882": {
+    "handle": "A882",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A883": {
+    "handle": "A883",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A884": {
+    "handle": "A884",
+    "content": "磁盘阵列",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A886": {
+    "handle": "A886",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A889": {
+    "handle": "A889",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A88A": {
+    "handle": "A88A",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A88B": {
+    "handle": "A88B",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A88C": {
+    "handle": "A88C",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A88F": {
+    "handle": "A88F",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A890": {
+    "handle": "A890",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A892": {
+    "handle": "A892",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A893": {
+    "handle": "A893",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A894": {
+    "handle": "A894",
+    "content": "182MW/1173MWh储能项目",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A895": {
+    "handle": "A895",
+    "content": "133MW/760MWh储能项目",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A896": {
+    "handle": "A896",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A897": {
+    "handle": "A897",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A89F": {
+    "handle": "A89F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8A9": {
+    "handle": "A8A9",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8AA": {
+    "handle": "A8AA",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8AB": {
+    "handle": "A8AB",
+    "content": "-CCU1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8AC": {
+    "handle": "A8AC",
+    "content": "-CCU2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8AD": {
+    "handle": "A8AD",
+    "content": "-YB1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8C4": {
+    "handle": "A8C4",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8C5": {
+    "handle": "A8C5",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8C6": {
+    "handle": "A8C6",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8C9": {
+    "handle": "A8C9",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8CA": {
+    "handle": "A8CA",
+    "content": "-YB2",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8CC": {
+    "handle": "A8CC",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8CF": {
+    "handle": "A8CF",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8D4": {
+    "handle": "A8D4",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8D7": {
+    "handle": "A8D7",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8DA": {
+    "handle": "A8DA",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8DD": {
+    "handle": "A8DD",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8E0": {
+    "handle": "A8E0",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8E7": {
+    "handle": "A8E7",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8EA": {
+    "handle": "A8EA",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8ED": {
+    "handle": "A8ED",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8F8": {
+    "handle": "A8F8",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8F9": {
+    "handle": "A8F9",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8FA": {
+    "handle": "A8FA",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8FB": {
+    "handle": "A8FB",
+    "content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A8FC": {
+    "handle": "A8FC",
+    "content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，正面为挡板",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A8FD": {
+    "handle": "A8FD",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8FE": {
+    "handle": "A8FE",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A8FF": {
+    "handle": "A8FF",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A900": {
+    "handle": "A900",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A901": {
+    "handle": "A901",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A902": {
+    "handle": "A902",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A903": {
+    "handle": "A903",
+    "content": "所有屏柜光纤配线架ODF为后置，\\P正面为挡板,#7柜ODF5、6置于压板后",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，\n正面为挡板,#7柜ODF5、6置于压板后",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A904": {
+    "handle": "A904",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A905": {
+    "handle": "A905",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A906": {
+    "handle": "A906",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A907": {
+    "handle": "A907",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A908": {
+    "handle": "A908",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A909": {
+    "handle": "A909",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A90B": {
+    "handle": "A90B",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A90C": {
+    "handle": "A90C",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A90D": {
+    "handle": "A90D",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A90E": {
+    "handle": "A90E",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A90F": {
+    "handle": "A90F",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A911": {
+    "handle": "A911",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A913": {
+    "handle": "A913",
+    "content": "挡板",
+    "type": "TEXT",
+    "container": "Block(吉尔吉斯斯坦能量管理系统屏柜就位示意V4-20260122)"
+  },
+  "A914": {
+    "handle": "A914",
+    "content": "所有屏柜光纤配线架ODF为后置，\\P正面为挡板,#5柜ODF5、6置于压板后",
+    "plain_content": "所有屏柜光纤配线架ODF为后置，\n正面为挡板,#5柜ODF5、6置于压板后",
+    "type": "MULTILEADER",
+    "container": "RawDXF",
+    "raw_dxf": true
+  },
+  "A91F": {
+    "handle": "A91F",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A921": {
+    "handle": "A921",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A923": {
+    "handle": "A923",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A924": {
+    "handle": "A924",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A926": {
+    "handle": "A926",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A927": {
+    "handle": "A927",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A928": {
+    "handle": "A928",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A92B": {
+    "handle": "A92B",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A92D": {
+    "handle": "A92D",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A92F": {
+    "handle": "A92F",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A931": {
+    "handle": "A931",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A933": {
+    "handle": "A933",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A934": {
+    "handle": "A934",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A936": {
+    "handle": "A936",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A938": {
+    "handle": "A938",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A93B": {
+    "handle": "A93B",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A93D": {
+    "handle": "A93D",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A941": {
+    "handle": "A941",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A943": {
+    "handle": "A943",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A945": {
+    "handle": "A945",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A946": {
+    "handle": "A946",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A949": {
+    "handle": "A949",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A94A": {
+    "handle": "A94A",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A94C": {
+    "handle": "A94C",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A94E": {
+    "handle": "A94E",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A94F": {
+    "handle": "A94F",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A951": {
+    "handle": "A951",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A954": {
+    "handle": "A954",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A959": {
+    "handle": "A959",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A95A": {
+    "handle": "A95A",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A95B": {
+    "handle": "A95B",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A95C": {
+    "handle": "A95C",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A95D": {
+    "handle": "A95D",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A95E": {
+    "handle": "A95E",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A960": {
+    "handle": "A960",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A964": {
+    "handle": "A964",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U47)"
+  },
+  "A966": {
+    "handle": "A966",
+    "content": "20260115 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A967": {
+    "handle": "A967",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A968": {
+    "handle": "A968",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U47)"
+  },
+  "A996": {
+    "handle": "A996",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A998": {
+    "handle": "A998",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A99A": {
+    "handle": "A99A",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A99C": {
+    "handle": "A99C",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A99E": {
+    "handle": "A99E",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A9A0": {
+    "handle": "A9A0",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U48)"
+  },
+  "A9EA": {
+    "handle": "A9EA",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "A9EC": {
+    "handle": "A9EC",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "A9EE": {
+    "handle": "A9EE",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "A9F0": {
+    "handle": "A9F0",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "A9F2": {
+    "handle": "A9F2",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "A9F4": {
+    "handle": "A9F4",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U49)"
+  },
+  "AA1A": {
+    "handle": "AA1A",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA1C": {
+    "handle": "AA1C",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA1E": {
+    "handle": "AA1E",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA1F": {
+    "handle": "AA1F",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA21": {
+    "handle": "AA21",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA22": {
+    "handle": "AA22",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA23": {
+    "handle": "AA23",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA26": {
+    "handle": "AA26",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA28": {
+    "handle": "AA28",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA2A": {
+    "handle": "AA2A",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA2C": {
+    "handle": "AA2C",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA2E": {
+    "handle": "AA2E",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA2F": {
+    "handle": "AA2F",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA31": {
+    "handle": "AA31",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA33": {
+    "handle": "AA33",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA36": {
+    "handle": "AA36",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA38": {
+    "handle": "AA38",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA3C": {
+    "handle": "AA3C",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA3E": {
+    "handle": "AA3E",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA40": {
+    "handle": "AA40",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA41": {
+    "handle": "AA41",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA44": {
+    "handle": "AA44",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA45": {
+    "handle": "AA45",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA47": {
+    "handle": "AA47",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA49": {
+    "handle": "AA49",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA4A": {
+    "handle": "AA4A",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA4C": {
+    "handle": "AA4C",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA4F": {
+    "handle": "AA4F",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA54": {
+    "handle": "AA54",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA55": {
+    "handle": "AA55",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA56": {
+    "handle": "AA56",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA57": {
+    "handle": "AA57",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA58": {
+    "handle": "AA58",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA59": {
+    "handle": "AA59",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA5B": {
+    "handle": "AA5B",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA5F": {
+    "handle": "AA5F",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U50)"
+  },
+  "AA61": {
+    "handle": "AA61",
+    "content": "20260115 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA62": {
+    "handle": "AA62",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA63": {
+    "handle": "AA63",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U50)"
+  },
+  "AA6D": {
+    "handle": "AA6D",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA6F": {
+    "handle": "AA6F",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA71": {
+    "handle": "AA71",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA72": {
+    "handle": "AA72",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA74": {
+    "handle": "AA74",
+    "content": "版权所有，严禁擅自复制、使用或向第三方泄漏 © 南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA75": {
+    "handle": "AA75",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA76": {
+    "handle": "AA76",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA79": {
+    "handle": "AA79",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA7B": {
+    "handle": "AA7B",
+    "content": "1",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA7D": {
+    "handle": "AA7D",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA7F": {
+    "handle": "AA7F",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA81": {
+    "handle": "AA81",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA82": {
+    "handle": "AA82",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA84": {
+    "handle": "AA84",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA86": {
+    "handle": "AA86",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA89": {
+    "handle": "AA89",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA8B": {
+    "handle": "AA8B",
+    "content": "A",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA8F": {
+    "handle": "AA8F",
+    "content": "F",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA91": {
+    "handle": "AA91",
+    "content": "E",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA93": {
+    "handle": "AA93",
+    "content": "D",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA94": {
+    "handle": "AA94",
+    "content": "C",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA97": {
+    "handle": "AA97",
+    "content": "B",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA98": {
+    "handle": "AA98",
+    "content": "2",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA9A": {
+    "handle": "AA9A",
+    "content": "3",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA9C": {
+    "handle": "AA9C",
+    "content": "4",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA9D": {
+    "handle": "AA9D",
+    "content": "7",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AA9F": {
+    "handle": "AA9F",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAA2": {
+    "handle": "AAA2",
+    "content": "6",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAA7": {
+    "handle": "AAA7",
+    "content": "8",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAA8": {
+    "handle": "AAA8",
+    "content": "页  数",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAA9": {
+    "handle": "AAA9",
+    "content": "南京南瑞新能源科技有限公司",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAAA": {
+    "handle": "AAAA",
+    "content": "页  号",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAAB": {
+    "handle": "AAAB",
+    "content": "版本号",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAAC": {
+    "handle": "AAAC",
+    "content": "图  名",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAAE": {
+    "handle": "AAAE",
+    "content": "能量管理系统屏柜就位示意",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAB2": {
+    "handle": "AAB2",
+    "content": "All rights in this document and the information contained herein reserved.\\PReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "plain_content": "All rights in this document and the information contained herein reserved.\nReproduction,use or disclosure to third paties without express authority is strictly forbidden.NANJING NARI NEW ENERGY TECHNOLOGY CO.,LTD.",
+    "type": "MTEXT",
+    "container": "Block(*U51)"
+  },
+  "AAB4": {
+    "handle": "AAB4",
+    "content": "20260115 Ver1",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAB5": {
+    "handle": "AAB5",
+    "content": "图  型",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAB6": {
+    "handle": "AAB6",
+    "content": "图  号",
+    "type": "TEXT",
+    "container": "Block(*U51)"
+  },
+  "AAE4": {
+    "handle": "AAE4",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AAE6": {
+    "handle": "AAE6",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AAE8": {
+    "handle": "AAE8",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AAEA": {
+    "handle": "AAEA",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AAEC": {
+    "handle": "AAEC",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AAEE": {
+    "handle": "AAEE",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U52)"
+  },
+  "AB38": {
+    "handle": "AB38",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB3A": {
+    "handle": "AB3A",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB3C": {
+    "handle": "AB3C",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB3E": {
+    "handle": "AB3E",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB40": {
+    "handle": "AB40",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB42": {
+    "handle": "AB42",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U53)"
+  },
+  "AB8C": {
+    "handle": "AB8C",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "AB8E": {
+    "handle": "AB8E",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "AB90": {
+    "handle": "AB90",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "AB92": {
+    "handle": "AB92",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "AB94": {
+    "handle": "AB94",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "AB96": {
+    "handle": "AB96",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U54)"
+  },
+  "ABE0": {
+    "handle": "ABE0",
+    "content": "运    行",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "ABE2": {
+    "handle": "ABE2",
+    "content": "告    警",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "ABE4": {
+    "handle": "ABE4",
+    "content": "检    修",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "ABE6": {
+    "handle": "ABE6",
+    "content": "对时异常",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "ABE8": {
+    "handle": "ABE8",
+    "content": "就地状态",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "ABEA": {
+    "handle": "ABEA",
+    "content": "主/备状态",
+    "type": "TEXT",
+    "container": "Block(*U55)"
+  },
+  "AF0A": {
+    "handle": "AF0A",
+    "content": "Energy Management System Coordination Control Cabinet # 6",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF0B": {
+    "handle": "AF0B",
+    "content": "800*600*2260mm",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF0C": {
+    "handle": "AF0C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF1D": {
+    "handle": "AF1D",
+    "content": "-CCU1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF1E": {
+    "handle": "AF1E",
+    "content": "-CCU2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF22": {
+    "handle": "AF22",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF23": {
+    "handle": "AF23",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF36": {
+    "handle": "AF36",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF37": {
+    "handle": "AF37",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF43": {
+    "handle": "AF43",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF45": {
+    "handle": "AF45",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF46": {
+    "handle": "AF46",
+    "content": "-YB1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF5B": {
+    "handle": "AF5B",
+    "content": "-YB2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF5C": {
+    "handle": "AF5C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF65": {
+    "handle": "AF65",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF66": {
+    "handle": "AF66",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF68": {
+    "handle": "AF68",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF69": {
+    "handle": "AF69",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF78": {
+    "handle": "AF78",
+    "content": "-CCU1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF79": {
+    "handle": "AF79",
+    "content": "-CCU2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF7C": {
+    "handle": "AF7C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF7D": {
+    "handle": "AF7D",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF7E": {
+    "handle": "AF7E",
+    "content": "-SW2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF7F": {
+    "handle": "AF7F",
+    "content": "-SW1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AF84": {
+    "handle": "AF84",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFD6": {
+    "handle": "AFD6",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFD7": {
+    "handle": "AFD7",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFDB": {
+    "handle": "AFDB",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFDC": {
+    "handle": "AFDC",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFDE": {
+    "handle": "AFDE",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFDF": {
+    "handle": "AFDF",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFE0": {
+    "handle": "AFE0",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFE2": {
+    "handle": "AFE2",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFE3": {
+    "handle": "AFE3",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFE8": {
+    "handle": "AFE8",
+    "content": "-YB1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFFD": {
+    "handle": "AFFD",
+    "content": "-YB2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "AFFE": {
+    "handle": "AFFE",
+    "content": "-ODF1",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B000": {
+    "handle": "B000",
+    "content": "-ODF2",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B001": {
+    "handle": "B001",
+    "content": "-ODF3",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B002": {
+    "handle": "B002",
+    "content": "-ODF4",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B004": {
+    "handle": "B004",
+    "content": "-ODF5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B005": {
+    "handle": "B005",
+    "content": "-ODF6",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B00A": {
+    "handle": "B00A",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B03C": {
+    "handle": "B03C",
+    "content": "baffle",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1B1": {
+    "handle": "B1B1",
+    "content": "0",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1B4": {
+    "handle": "B1B4",
+    "content": "5",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1B7": {
+    "handle": "B1B7",
+    "content": "10",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1BA": {
+    "handle": "B1BA",
+    "content": "15",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1BD": {
+    "handle": "B1BD",
+    "content": "20",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1C0": {
+    "handle": "B1C0",
+    "content": "25",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1C3": {
+    "handle": "B1C3",
+    "content": "30",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1C6": {
+    "handle": "B1C6",
+    "content": "35",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1C9": {
+    "handle": "B1C9",
+    "content": "40",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1DB": {
+    "handle": "B1DB",
+    "content": "Remote control timing cabinet",
+    "plain_content": "Remote control timing cabinet",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1E2": {
+    "handle": "B1E2",
+    "content": "45",
+    "type": "TEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1E3": {
+    "handle": "B1E3",
+    "content": "{\\ Fgbenor, gbcbig | c134; 1-25n \\ PDARI-3001 Remote Communication Device}",
+    "plain_content": "\\ Fgbenor, gbcbig | c134; 1-25n \\ PDARI-3001 Remote Communication Device",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1E6": {
+    "handle": "B1E6",
+    "content": "{\\ Fgbenor, gbcbig | c134; 2-25n \\ PDARI-3001 Remote Communication Device}",
+    "plain_content": "\\ Fgbenor, gbcbig | c134; 2-25n \\ PDARI-3001 Remote Communication Device",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1EA": {
+    "handle": "B1EA",
+    "content": "{\\ W0.8; 1-40n Station Control Layer Switch}",
+    "plain_content": "\\ W0.8; 1-40n Station Control Layer Switch",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1EE": {
+    "handle": "B1EE",
+    "content": "{\\ W0.8; 2-40n Station Control Layer Switch}",
+    "plain_content": "\\ W0.8; 2-40n Station Control Layer Switch",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1FA": {
+    "handle": "B1FA",
+    "content": "{\\ Fgbenor, gbcbig | c134; 1-51n \\ PYZ-9820 Clock Synchronization Device}",
+    "plain_content": "\\ Fgbenor, gbcbig | c134; 1-51n \\ PYZ-9820 Clock Synchronization Device",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B1FD": {
+    "handle": "B1FD",
+    "content": "{\\ Fgbenor, gbcbig | c134; 2-51n \\ PYZ-9820 Clock Synchronization Device}",
+    "plain_content": "\\ Fgbenor, gbcbig | c134; 2-51n \\ PYZ-9820 Clock Synchronization Device",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  },
+  "B220": {
+    "handle": "B220",
+    "content": "{\\H0.8571x;21n\\P\\Fgbenor,gbcbig|c134;\\H1.167x;\\W0.7;DARI-3402\\Fisocp2,gbcbig|c134;\\H0.8571x;\\P\\H1.021x;\\W1;\\C7; Public measurement and control device",
+    "plain_content": "21n\nDARI-3402\n Public measurement and control device",
+    "type": "MTEXT",
+    "container": "Block(*Model_Space)"
+  }
+}

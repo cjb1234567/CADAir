@@ -12,6 +12,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - ✅ **Plugin Architecture** — Easy to add new translation engines
 - ✅ **Human Translation Workflow** — Extract → Edit JSON → Write back
 - ✅ **In-Memory Translation Cache** — Avoid duplicate API calls, auto deduplicate identical texts
+- ✅ **Pre-API Translation Filtering** — Skips numbers, dimensions, CAD markers, target-language text, and stable technical abbreviations
 - ✅ **Async Translation with Concurrency Control** — QPS limiting, max concurrent requests
 - ✅ **Environment Variables Support** — Configure via `.env` file
 - ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG/DXF output and patches DXF text directly
@@ -19,6 +20,8 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 ## Documentation
 
 - [Work Summary: DWG Translation Roundtrip Fix](docs/WORK_SUMMARY_2026-05-06.md)
+- [Work Summary: DXF Non-Roundtrip Patch Output](docs/WORK_SUMMARY_DXF_NON_ROUNDTRIP_2026-05-06.md)
+- [Work Summary: Translation Filtering](docs/WORK_SUMMARY_TRANSLATION_FILTERING_2026-05-06.md)
 - [TODO](docs/TODO.md)
 
 ## Requirements
@@ -102,6 +105,7 @@ CADAir/
 │   ├── extract.py         # Text extraction, including raw DXF MULTILEADER supplement
 │   ├── writeback.py       # Translated text writer and direct DXF patcher
 │   ├── translator.py      # Translation engine ABC + Factory
+│   ├── translation_filter.py # Pre-API CAD text filtering
 │   ├── manager.py         # Workflow manager (Facade)
 │   └── plugins/
 │       ├── __init__.py
@@ -148,6 +152,7 @@ dwgtranslator/
 ├── writeback.py         # Write translated texts back to entities
 ├── translator.py        # Translation engine ABC + Factory pattern
 ├── translation_cache.py # In-memory cache to avoid duplicate API calls
+├── translation_filter.py # Pre-API filtering for CAD markers and target-language text
 ├── manager.py           # Facade for workflow management
 └── plugins/
     └── baidu.py         # Baidu: field-specific + general translation APIs (sync + async)
@@ -161,7 +166,21 @@ dwgtranslator/
 | `extract.py` | Extract from layouts, block definitions, INSERT attributes, MTEXT, and raw DXF MULTILEADER group code `304` |
 | `writeback.py` | Write translations and directly patch DXF text without full `ezdxf.saveas()` for DWG/DXF input |
 | `translator.py` | ABC, Mock implementation, factory for engine registration |
+| `translation_filter.py` | Skip non-translatable CAD labels before cache lookup and API calls |
 | `manager.py` | Orchestrate: extract → translate → write-back |
+
+### Pre-API Translation Filtering
+
+Before checking the translation cache or calling a translation API, the manager filters text that should remain unchanged in CAD drawings.
+
+Skipped categories include:
+
+- Pure numbers, page/range markers, dimensions, sizes, ratios, and electrical values.
+- Equipment, cabinet, terminal, and slot labels such as `CAB-01`, `XT1`, `U01`, and `2U`.
+- Stable uppercase technical abbreviations such as `ODF`, `PDU`, `CCU`, `ETH`, `RUN`, `ALM`, and `PWR`.
+- Text already matching the target language, such as English labels when `TRANSLATE_TARGET=en`.
+
+Skipped handles are not added to `translated_bundles`, so they are not written back and the original DXF text is preserved. Mixed source-language labels such as `主柜 PDU` still go through translation because they contain source text that needs output in the target language.
 
 ### DWG/DXF Output Compatibility
 
@@ -266,6 +285,8 @@ uv run python examples/baidu_async_translate.py data/20260123.dwg
 
 *Translation cache: In-memory cache automatically deduplicates identical texts, reducing API calls significantly for repeated content.*
 
+*Translation filtering: Non-translatable CAD labels are skipped before cache lookup and API calls, reducing API usage and preserving stable identifiers.*
+
 ### Adding New Translation Plugins
 
 ```python
@@ -318,6 +339,8 @@ CADAir/
 │   ├── extract.py         # Text extraction, including raw MULTILEADER supplement
 │   ├── writeback.py       # Text write-back and direct DXF patching
 │   ├── translator.py      # Translation engine ABC + Factory
+│   ├── translation_cache.py # In-memory translation cache
+│   ├── translation_filter.py # Pre-API CAD text filtering
 │   ├── manager.py         # Workflow facade
 │   └── plugins/
 │       ├── __init__.py

@@ -4,8 +4,8 @@ Last updated: 2026-05-06
 
 ## High Priority
 
-- [x] Add pre-API translation filtering for non-translatable CAD labels, including numbers, dimensions, page numbers, equipment slot labels, target-language text, and uppercase technical abbreviations.
 - [ ] Add a glossary/allowlist for CAD and electrical cabinet terms such as `ODF`, `PDU`, `CCU`, `ETH`, `RUN`, `ALM`, `PWR`, and cabinet IDs.
+- [ ] Split async translation logging into API request count and handle writeback count.
 
 ## Medium Priority
 
@@ -39,3 +39,5 @@ Last updated: 2026-05-06
 - [x] Added `tests/test_simple_case_regression.py` covering non-roundtrip DXF patch observations for `TEXT`, `MTEXT`, and `MULTILEADER`.
 - [x] Verified the simple-case regression suite with `.venv/bin/python -m unittest tests.test_simple_case_regression`.
 - [x] Supported non-roundtrip patch output for DXF input files, not only DWG input.
+- [x] Added pre-API translation filtering for non-translatable CAD labels, including numbers, dimensions, page numbers, equipment slot labels, target-language text, and uppercase technical abbreviations.
+- [x] Verified filtering with `.venv/bin/python -m unittest tests.test_translation_filter` and a full Baidu async run on `data/20260123.dwg`.

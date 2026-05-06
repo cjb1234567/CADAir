@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from pathlib import Path
 from typing import Optional, Dict, Any, Callable, List
 from .core import DWGCore
 from .extract import TextExtractor
@@ -52,8 +53,9 @@ class TranslationManager:
         
         self.extractor.set_document(self.doc)
         bundles = self.extractor.extract()
-        if self.core.last_converted_dxf:
-            self.extractor.extract_raw_multileaders(self.core.last_converted_dxf)
+        source_dxf = self._source_dxf_for_raw_access(input_path)
+        if source_dxf:
+            self.extractor.extract_raw_multileaders(source_dxf)
             bundles = self.extractor.get_bundles()
         
         translated_bundles = self._do_translate(bundles, source_lang, target_lang, custom_translator)
@@ -84,8 +86,9 @@ class TranslationManager:
         
         self.extractor.set_document(self.doc)
         bundles = self.extractor.extract()
-        if self.core.last_converted_dxf:
-            self.extractor.extract_raw_multileaders(self.core.last_converted_dxf)
+        source_dxf = self._source_dxf_for_raw_access(input_path)
+        if source_dxf:
+            self.extractor.extract_raw_multileaders(source_dxf)
             bundles = self.extractor.get_bundles()
         
         translated_bundles = await self._do_translate_async(bundles, source_lang, target_lang)
@@ -111,20 +114,26 @@ class TranslationManager:
         return True
 
     def _save_without_ezdxf_roundtrip(self, input_path: str, output_path: str) -> bool:
-        """DWG输入时保留ODA输出结构，只做DXF文本定点替换。"""
-        if not input_path.lower().endswith('.dwg'):
-            return False
-
-        source_dxf = self.core.last_converted_dxf
-        if not source_dxf:
-            source_dxf = self.core.convert_dwg_to_dxf(input_path)
+        """保留原始DXF结构，只做文本定点替换。"""
+        source_dxf = self._source_dxf_for_raw_access(input_path)
         if not source_dxf:
             return False
 
-        dxf_path = output_path.replace('.dwg', '.dxf')
+        dxf_path = str(Path(output_path).with_suffix('.dxf'))
         self.writer.patch_dxf_file(source_dxf, dxf_path)
         logger.info(f"文件已保存: {dxf_path}")
         return True
+
+    def _source_dxf_for_raw_access(self, input_path: str) -> Optional[str]:
+        input_suffix = Path(input_path).suffix.lower()
+        if input_suffix == '.dxf':
+            return input_path
+        if input_suffix != '.dwg':
+            return None
+
+        if self.core.last_converted_dxf:
+            return self.core.last_converted_dxf
+        return self.core.convert_dwg_to_dxf(input_path)
     
     def _do_translate(self, bundles: Dict[str, Dict[str, Any]], 
                      source_lang: str, target_lang: str,

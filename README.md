@@ -7,14 +7,14 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - ✅ **DWG ↔ DXF Conversion** — Uses ODA File Converter
 - ✅ **Multi-position Text Extraction** — Layouts, Block definitions (including anonymous blocks `*U`), Block attributes (ATTRIB)
 - ✅ **MTEXT Format Handling** — Extract plain text for translation
-- ✅ **UTF-8 Encoding** — Auto upgrade DXF to R2007
+- ✅ **DXF Encoding Handling** — Detects R2007+ UTF-8 and legacy `$DWGCODEPAGE` encodings for raw DXF patching
 - ✅ **Chinese Font Support** — Auto configure `gbcbig.shx`
 - ✅ **Plugin Architecture** — Easy to add new translation engines
 - ✅ **Human Translation Workflow** — Extract → Edit JSON → Write back
 - ✅ **In-Memory Translation Cache** — Avoid duplicate API calls, auto deduplicate identical texts
 - ✅ **Async Translation with Concurrency Control** — QPS limiting, max concurrent requests
 - ✅ **Environment Variables Support** — Configure via `.env` file
-- ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG output and patches ODA DXF text directly
+- ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG/DXF output and patches DXF text directly
 
 ## Documentation
 
@@ -159,22 +159,24 @@ dwgtranslator/
 |--------|----------------------|
 | `core.py` | Read DWG/DXF, run ODA conversion, track ODA-generated DXF for non-roundtrip output |
 | `extract.py` | Extract from layouts, block definitions, INSERT attributes, MTEXT, and raw DXF MULTILEADER group code `304` |
-| `writeback.py` | Write translations and directly patch ODA DXF text without full `ezdxf.saveas()` for DWG input |
+| `writeback.py` | Write translations and directly patch DXF text without full `ezdxf.saveas()` for DWG/DXF input |
 | `translator.py` | ABC, Mock implementation, factory for engine registration |
 | `manager.py` | Orchestrate: extract → translate → write-back |
 
-### DWG Output Compatibility
+### DWG/DXF Output Compatibility
 
-For DWG input, the final DXF output intentionally avoids a full `ezdxf` save roundtrip.
+For DWG and DXF input, the final DXF output intentionally avoids a full `ezdxf` save roundtrip.
 
 The workflow is:
 
-1. ODA File Converter creates a viewer-compatible base DXF.
+1. DWG input is converted by ODA File Converter; DXF input uses the original DXF as the base file.
 2. `ezdxf` is used for safe extraction.
 3. Missing complex `MULTILEADER` text is supplemented from raw DXF group code `304`.
-4. The translated text is patched directly into the ODA DXF by entity handle.
+4. The translated text is patched directly into the base DXF by entity handle.
 
 This preserves complex `MULTILEADER` arrows, labels, proxy graphics, and context data that some CAD viewers rely on. See [the work summary](docs/WORK_SUMMARY_2026-05-06.md) for the root-cause analysis and verification details.
+
+Raw DXF reads and writes use lightweight header-based encoding detection. R2007+ DXF files (`AC1021` and newer) are treated as UTF-8, while older DXF files use `$DWGCODEPAGE` mappings such as `ANSI_936` → `gbk`.
 
 ### Available Translation Engines
 

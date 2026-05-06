@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 import unittest
 from collections import Counter
 from pathlib import Path
+from unittest.mock import Mock
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -103,6 +105,64 @@ class TestSimpleCaseRegression(unittest.TestCase):
             self.assertIn(entity_type, by_type)
             self.assertGreater(len(by_type[entity_type]), 0)
             self.assertTrue(any(item["contains_expected"] for item in by_type[entity_type]))
+
+    def test_dxf_encoding_detection_uses_utf8_for_r2007_and_codepage_for_legacy(self):
+        from dwgtranslator.writeback import TextWriter
+
+        writer = TextWriter()
+        self.assertEqual(writer._detect_dxf_encoding(str(self.oda_dxf)), "utf-8")
+
+        legacy_dxf = (
+            "  0\nSECTION\n"
+            "  2\nHEADER\n"
+            "  9\n$ACADVER\n"
+            "  1\nAC1015\n"
+            "  9\n$DWGCODEPAGE\n"
+            "  3\nANSI_936\n"
+            "  0\nENDSEC\n"
+            "  0\nEOF\n"
+        )
+        with tempfile.TemporaryDirectory(dir=ROOT_DIR) as tmp_dir:
+            path = Path(tmp_dir) / "legacy.dxf"
+            path.write_text(legacy_dxf, encoding="ascii")
+            self.assertEqual(writer._detect_dxf_encoding(str(path)), "gbk")
+
+    def test_manager_translates_dxf_input_without_ezdxf_save_roundtrip(self):
+        import ezdxf
+        from dwgtranslator.manager import TranslationManager
+        from tests.scripts.sample_helpers import observe_translated_handles
+
+        manager = TranslationManager(oda_path="/nonexistent/ODAFileConverter")
+        manager.core.save = Mock(side_effect=AssertionError("core.save should not be called for DXF input"))
+
+        with tempfile.TemporaryDirectory(dir=ROOT_DIR) as tmp_dir:
+            output_path = Path(tmp_dir) / "simple_case_translated.DWG"
+            result = manager.translate_file(
+                str(self.oda_dxf),
+                str(output_path),
+                target_lang="en",
+                source_lang="zh",
+                enable_chinese_font=False,
+                custom_translator=lambda text, _target_lang: f"TT::{text}",
+            )
+
+            patched_path = output_path.with_suffix(".dxf")
+            self.assertTrue(result)
+            self.assertTrue(patched_path.exists())
+            manager.core.save.assert_not_called()
+
+            doc = ezdxf.readfile(patched_path)
+            self.assertIsNotNone(doc)
+
+            translated = {
+                handle: {k: v for k, v in data.items() if k != "entity"}
+                for handle, data in manager.writer.translated_bundles.items()
+            }
+            observation = observe_translated_handles(patched_path, translated)
+            self.assertEqual(observation["matched_expected"], len(translated))
+            self.assertTrue(
+                any(item["type"] == "MULTILEADER" and item["contains_expected"] for item in observation["entities"].values())
+            )
 
 
 if __name__ == "__main__":

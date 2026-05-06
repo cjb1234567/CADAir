@@ -2,6 +2,7 @@ import json
 from ezdxf.document import Drawing
 from ezdxf.tools.text import plain_mtext
 from typing import Dict, Any, Optional
+from .writeback import detect_dxf_encoding
 
 
 class TextExtractor:
@@ -110,7 +111,8 @@ class TextExtractor:
 
     def extract_raw_multileaders(self, dxf_path: str) -> int:
         """从原始DXF文本补充提取MULTILEADER，避免ezdxf丢失复杂实体。"""
-        with open(dxf_path, 'r', encoding='utf-8', errors='surrogateescape', newline='') as f:
+        encoding = detect_dxf_encoding(dxf_path)
+        with open(dxf_path, 'r', encoding=encoding, errors='surrogateescape', newline='') as f:
             lines = f.readlines()
 
         added = 0

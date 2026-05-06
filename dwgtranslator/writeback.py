@@ -5,13 +5,65 @@ from ezdxf.document import Drawing
 from typing import Dict, Any, Optional
 
 
+DXF_CODEPAGE_ENCODINGS = {
+    'ANSI_874': 'cp874',
+    'ANSI_932': 'cp932',
+    'ANSI_936': 'gbk',
+    'ANSI_949': 'cp949',
+    'ANSI_950': 'cp950',
+    'ANSI_1250': 'cp1250',
+    'ANSI_1251': 'cp1251',
+    'ANSI_1252': 'cp1252',
+    'ANSI_1253': 'cp1253',
+    'ANSI_1254': 'cp1254',
+    'ANSI_1255': 'cp1255',
+    'ANSI_1256': 'cp1256',
+    'ANSI_1257': 'cp1257',
+    'ANSI_1258': 'cp1258',
+}
+
+UTF8_DXF_VERSIONS = {
+    'AC1021',  # R2007
+    'AC1024',  # R2010
+    'AC1027',  # R2013
+    'AC1032',  # R2018
+}
+
+
+def detect_dxf_encoding(source_path: str) -> str:
+    """Detect DXF text encoding from ACADVER/DWGCODEPAGE without parsing the full file."""
+    acadver = None
+    codepage = None
+
+    with open(source_path, 'r', encoding='ascii', errors='ignore', newline='') as f:
+        lines = []
+        for _ in range(1200):
+            line = f.readline()
+            if not line:
+                break
+            lines.append(line.strip())
+
+    for i, value in enumerate(lines[:-2]):
+        if value == '$ACADVER':
+            acadver = lines[i + 2].upper()
+        elif value == '$DWGCODEPAGE':
+            codepage = lines[i + 2].upper()
+
+        if acadver and codepage:
+            break
+
+    if acadver in UTF8_DXF_VERSIONS:
+        return 'utf-8'
+    return DXF_CODEPAGE_ENCODINGS.get(codepage or '', 'cp1252')
+
+
 class TextWriter:
     """文本写回模块 - 将翻译后的文本写回DWG"""
     
     def __init__(self, doc: Optional[Drawing] = None):
         self.doc = doc
         self.translated_bundles: Dict[str, Dict[str, Any]] = {}
-    
+
     def set_document(self, doc: Drawing):
         self.doc = doc
     
@@ -81,13 +133,17 @@ class TextWriter:
         print(f"成功写回 {success}/{len(self.translated_bundles)} 条文本")
         return success
 
+    def _detect_dxf_encoding(self, source_path: str) -> str:
+        return detect_dxf_encoding(source_path)
+
     def patch_dxf_file(self, source_path: str, output_path: str) -> int:
         """直接修改DXF文本，不通过ezdxf重新保存整个文件。"""
         if not self.translated_bundles:
             print("没有翻译数据可写回")
             return 0
 
-        with open(source_path, 'r', encoding='utf-8', errors='surrogateescape', newline='') as f:
+        encoding = self._detect_dxf_encoding(source_path)
+        with open(source_path, 'r', encoding=encoding, errors='surrogateescape', newline='') as f:
             lines = f.readlines()
 
         entity_ranges = self._index_entity_ranges(lines)
@@ -102,7 +158,7 @@ class TextWriter:
                 success += 1
 
         os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
-        with open(output_path, 'w', encoding='utf-8', errors='surrogateescape', newline='') as f:
+        with open(output_path, 'w', encoding=encoding, errors='surrogateescape', newline='') as f:
             f.writelines(lines)
 
         print(f"成功直接补丁写回 {success}/{len(self.translated_bundles)} 条文本")

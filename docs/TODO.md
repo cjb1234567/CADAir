@@ -4,7 +4,6 @@ Last updated: 2026-05-06
 
 ## High Priority
 
-- [ ] Support non-roundtrip patch output for DXF input files, not only DWG input.
 - [ ] Add translation filtering before API calls.
 - [ ] Skip pure numbers, dimensions, page numbers, and equipment slot labels by default.
 - [ ] Add a glossary/allowlist for CAD and electrical cabinet terms such as `ODF`, `PDU`, `CCU`, `ETH`, `RUN`, `ALM`, `PWR`, and cabinet IDs.
@@ -40,3 +39,4 @@ Last updated: 2026-05-06
 - [x] Generated `tests/data/simple_case.*.json` baselines and `tests/data/simple_case.patched.dxf` from the sampling flow.
 - [x] Added `tests/test_simple_case_regression.py` covering non-roundtrip DXF patch observations for `TEXT`, `MTEXT`, and `MULTILEADER`.
 - [x] Verified the simple-case regression suite with `.venv/bin/python -m unittest tests.test_simple_case_regression`.
+- [x] Supported non-roundtrip patch output for DXF input files, not only DWG input.

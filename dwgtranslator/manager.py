@@ -7,6 +7,7 @@ from .extract import TextExtractor
 from .writeback import TextWriter
 from .translator import TranslationEngine, MockTranslator
 from .translation_cache import get_shared_cache, TranslationCache
+from .translation_filter import should_translate_text
 
 logging.basicConfig(
     level=logging.INFO,
@@ -145,9 +146,16 @@ class TranslationManager:
         translated = {}
         total_count = len(bundles)
         cache_hits = 0
+        skipped = {}
         
         for handle, data in bundles.items():
             content = data.get('plain_content') or data.get('content', '')
+            filter_result = should_translate_text(content, source_lang, target_lang)
+            if not filter_result.should_translate:
+                reason = filter_result.reason or 'filtered'
+                skipped[reason] = skipped.get(reason, 0) + 1
+                logger.debug(f"跳过翻译 [{handle}] ({reason}): {content}")
+                continue
             
             # 每条翻译前先查缓存
             cached_result = cache.get(content, source_lang, target_lang)
@@ -175,7 +183,14 @@ class TranslationManager:
                     'translated': result
                 }
         
-        logger.info(f"翻译完成，共 {total_count} 条，缓存命中: {cache_hits} 条，实际翻译: {total_count - cache_hits} 条")
+        skipped_count = sum(skipped.values())
+        actual_translated = total_count - cache_hits - skipped_count
+        logger.info(
+            f"翻译完成，共 {total_count} 条，跳过: {skipped_count} 条，"
+            f"缓存命中: {cache_hits} 条，实际翻译: {actual_translated} 条"
+        )
+        if skipped:
+            logger.info(f"跳过原因统计: {skipped}")
         return translated
     
     async def _do_translate_async(self, bundles: Dict[str, Dict[str, Any]],
@@ -190,9 +205,16 @@ class TranslationManager:
         # 第一步：遍历所有文本，先查一遍缓存，标记需要翻译的（避免并发下重复翻译）
         unique_content_map = {}  # content -> [(handle, data)]
         cache_hits = 0
+        skipped = {}
         
         for handle, data in bundles.items():
             content = data.get('plain_content') or data.get('content', '')
+            filter_result = should_translate_text(content, source_lang, target_lang)
+            if not filter_result.should_translate:
+                reason = filter_result.reason or 'filtered'
+                skipped[reason] = skipped.get(reason, 0) + 1
+                logger.debug(f"跳过翻译 [{handle}] ({reason}): {content}")
+                continue
             
             # 先查缓存
             cached_result = cache.get(content, source_lang, target_lang)
@@ -209,7 +231,13 @@ class TranslationManager:
                     unique_content_map[content] = []
                 unique_content_map[content].append((handle, data))
         
-        logger.info(f"缓存命中: {cache_hits} 条，唯一待翻译内容: {len(unique_content_map)} 条")
+        skipped_count = sum(skipped.values())
+        logger.info(
+            f"跳过: {skipped_count} 条，缓存命中: {cache_hits} 条，"
+            f"唯一待翻译内容: {len(unique_content_map)} 条"
+        )
+        if skipped:
+            logger.info(f"跳过原因统计: {skipped}")
         
         # 第二步：翻译唯一内容
         if unique_content_map:
@@ -249,8 +277,11 @@ class TranslationManager:
                             'translated': result
                         }
         
-        actual_translated = total_count - cache_hits
-        logger.info(f"翻译完成，共 {total_count} 条，缓存命中: {cache_hits} 条，实际翻译: {actual_translated} 条")
+        actual_translated = total_count - cache_hits - skipped_count
+        logger.info(
+            f"翻译完成，共 {total_count} 条，跳过: {skipped_count} 条，"
+            f"缓存命中: {cache_hits} 条，实际翻译: {actual_translated} 条"
+        )
         return translated
     
     def extract_only(self, input_path: str, json_path: Optional[str] = None) -> Dict[str, Dict[str, Any]]:

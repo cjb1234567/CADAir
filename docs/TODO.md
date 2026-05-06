@@ -4,8 +4,7 @@ Last updated: 2026-05-06
 
 ## High Priority
 
-- [ ] Add translation filtering before API calls.
-- [ ] Skip pure numbers, dimensions, page numbers, and equipment slot labels by default.
+- [x] Add pre-API translation filtering for non-translatable CAD labels, including numbers, dimensions, page numbers, equipment slot labels, target-language text, and uppercase technical abbreviations.
 - [ ] Add a glossary/allowlist for CAD and electrical cabinet terms such as `ODF`, `PDU`, `CCU`, `ETH`, `RUN`, `ALM`, `PWR`, and cabinet IDs.
 
 ## Medium Priority

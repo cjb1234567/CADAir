@@ -27,17 +27,17 @@ Reference standards:
 
 ## High Priority Implementation Tasks
 
-- [ ] Add FastAPI dependencies to `pyproject.toml`: `fastapi>=0.110,<1`, `uvicorn>=0.27,<1`, `pydantic>=2,<3`.
-- [ ] Add `cadair/service_schemas.py` with standard request, response, file, error, health, and params models.
-- [ ] Add `cadair/service.py` exposing `GET /health` and `POST /v1/run`.
-- [ ] Implement platform path policy: accept input files only under configured roots, and write all service outputs under `CADAIR_OUTPUT_ROOT`.
-- [ ] Implement CAD translation run flow using existing CADAir logic with request-scoped output and work directories.
-- [ ] Support `params.glossary_json` in `/v1/run`, in addition to `params.glossary_file`.
-- [ ] Support optional layout diagnostics through `params.layout_check`.
-- [ ] Support optional safe shrink through `params.shrink` and shrink tuning params.
-- [ ] Write `result.json` and `manifest.json` for each request.
-- [ ] Add structured service logs with `request_id`, `user_id`, `skill_id`, `stage`, `duration_ms`, `status`, and `error_code`.
-- [ ] Add tests for `/health`, invalid input, missing file, path rejection, and mock DXF success flow.
+- [x] Add FastAPI dependencies to `pyproject.toml`: `fastapi>=0.110,<1`, `uvicorn>=0.27,<1`, `pydantic>=2,<3`.
+- [x] Add `cadair/service_schemas.py` with standard request, response, file, error, health, and params models.
+- [x] Add `cadair/service.py` exposing `GET /health` and `POST /v1/run`.
+- [x] Implement platform path policy: accept input files only under configured roots, and write all service outputs under `CADAIR_OUTPUT_ROOT`.
+- [x] Implement CAD translation run flow using existing CADAir logic with request-scoped output and work directories.
+- [x] Support `params.glossary_json` in `/v1/run`, in addition to `params.glossary_file`.
+- [x] Support optional layout diagnostics through `params.layout_check`.
+- [x] Support optional safe shrink through `params.shrink` and shrink tuning params.
+- [x] Write `result.json` and `manifest.json` for each request.
+- [x] Add structured service logs with `request_id`, `user_id`, `skill_id`, `stage`, `duration_ms`, `status`, and `error_code`.
+- [x] Add tests for `/health`, invalid input, missing file, path rejection, and mock DXF success flow.
 - [ ] Add `Dockerfile` and root `docker-compose.yml` for local service runs.
 - [ ] Add `.env.example` without real secrets.
 - [ ] Add `app-integrations/cadair-translate/` maintenance directory.
@@ -360,25 +360,53 @@ app-integrations/
 
 ## Test Plan
 
-- [ ] Unit test `/health` with `TestClient`.
-- [ ] Unit test `/v1/run` rejects empty `input.files`.
-- [ ] Unit test `/v1/run` rejects unsupported file extensions.
-- [ ] Unit test `/v1/run` rejects paths outside allowed roots.
-- [ ] Unit test `/v1/run` returns `file_not_found` for missing allowed path.
-- [ ] Unit test `/v1/run` succeeds with `tests/data/simple_case.oda.dxf` copied or mounted under an allowed test upload root and `engine=mock`.
+- [x] Unit test `/health` with `TestClient`.
+- [x] Unit test `/v1/run` rejects empty `input.files`.
+- [x] Unit test `/v1/run` rejects unsupported file extensions.
+- [x] Unit test `/v1/run` rejects paths outside allowed roots.
+- [x] Unit test `/v1/run` returns `file_not_found` for missing allowed path.
+- [x] Unit test `/v1/run` succeeds with `tests/data/simple_case.oda.dxf` copied or mounted under an allowed test upload root and `engine=mock`.
 - [ ] Unit test request-level `params.glossary_json` fixed translation behavior.
-- [ ] Unit test outputs are written under the configured delivery root.
-- [ ] Keep existing regression tests: `tests.test_simple_case_regression` and `tests.test_translation_filter`.
+- [x] Unit test outputs are written under the configured delivery root.
+- [x] Keep existing regression tests: `tests.test_simple_case_regression` and `tests.test_translation_filter`.
 
 ## Validation Commands
 
 ```bash
-uv run python -m unittest tests.test_service_api
-uv run python -m unittest tests.test_simple_case_regression
-uv run python -m unittest tests.test_translation_filter
+uv run pytest tests/test_service_api.py
+uv run pytest tests/test_simple_case_regression.py
+uv run pytest tests/test_translation_filter.py
 uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8101
 curl http://localhost:8101/health
 ```
+
+## HTTP Service V1 Validation Notes
+
+Completed on 2026-05-07 on branch `feature/http-service-v1`.
+
+Automated tests passed with the Tsinghua PyPI mirror:
+
+```bash
+uv lock --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+uv run --index-url https://pypi.tuna.tsinghua.edu.cn/simple pytest tests/test_service_api.py
+uv run --index-url https://pypi.tuna.tsinghua.edu.cn/simple pytest tests/test_translation_filter.py
+uv run --index-url https://pypi.tuna.tsinghua.edu.cn/simple pytest tests/test_simple_case_regression.py
+```
+
+Results:
+
+- `tests/test_service_api.py`: 6 passed.
+- `tests/test_translation_filter.py`: 17 passed.
+- `tests/test_simple_case_regression.py`: 8 passed.
+
+Manual smoke tests using `data/20260123.dwg` also passed:
+
+- `engine=mock`, `layout_check=true`, `shrink=true`: completed in about 8.5 seconds, extracted 975 text entries, wrote back 327 translated handles, detected 34 layout overflows, and patched 3 shrink actions.
+- `engine=baidu_field`, `domain=machinery`, `layout_check=true`, `shrink=true`: completed in about 111 seconds, extracted 975 text entries, wrote back 327 translated handles, detected 136 layout overflows, and patched 86 shrink actions.
+
+Observed issue:
+
+- During the `baidu_field` smoke run, the translator logged one `请求失败:` line without exception details, but the overall request completed successfully. A temporary excerpt was saved outside the repository at `/tmp/opencode/cadair-service-smoke/baidu-field-error-log-excerpt.txt`. Follow-up should improve Baidu translator error diagnostics without logging secrets.
 
 Docker validation:
 

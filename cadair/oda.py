@@ -13,6 +13,7 @@ def convert_dwg_to_dxf(
     oda_path: Path,
     version: str = "ACAD2007",
     recursive: bool = False,
+    timeout: int | None = None,
 ) -> Path:
     """Convert a DWG file to DXF by calling ODA File Converter directly."""
     input_path = Path(input_path).expanduser().resolve()
@@ -52,7 +53,8 @@ def convert_dwg_to_dxf(
         if not env.get("DISPLAY") and shutil.which("xvfb-run"):
             args = ["xvfb-run", "-a", *args]
 
-        result = subprocess.run(args, capture_output=True, text=True, env=env, timeout=120)
+        timeout_seconds = timeout or int(env.get("CADAIR_ODA_TIMEOUT_SECONDS", "120"))
+        result = subprocess.run(args, capture_output=True, text=True, env=env, timeout=timeout_seconds)
         if result.returncode != 0:
             raise RuntimeError(
                 "ODA File Converter failed\n"

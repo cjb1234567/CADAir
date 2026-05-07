@@ -4,6 +4,8 @@ Last updated: 2026-05-07
 
 ## High Priority
 
+- [ ] Provide a FastAPI wrapper and Dockerfile so CADAir can be packaged as a microservice tool and integrated into the existing AI panel, following `docs/integration/PYTHON-SCENARIO-INTEGRATION-STANDARD.zh-CN.md` and `docs/integration/PYTHON-APP-MAINTENANCE-DIRECTORY-DESIGN.zh-CN.md`.
+
 ## Medium Priority
 
 - [ ] Normalize internal CJK spacing for glossary lookup so formatted CAD labels such as `运    行` can match `运行`.

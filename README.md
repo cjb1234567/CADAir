@@ -27,6 +27,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - [Work Summary: Glossary Configuration and Fixed CAD Translations](docs/WORK_SUMMARY_GLOSSARY_CONFIG_2026-05-07.md)
 - [Work Summary: Text Layout Overflow Detection and Safe Shrink](docs/WORK_SUMMARY_TEXT_LAYOUT_SHRINK_2026-05-07.md)
 - [Work Summary: Unified CADAir CLI](docs/WORK_SUMMARY_CADAIR_CLI_2026-05-07.md)
+- [Work Summary: Service Integration Audit Cleanup](docs/WORK_SUMMARY_SERVICE_INTEGRATION_AUDIT_2026-05-07.md)
 - [TODO](docs/TODO.md)
 
 ## Requirements
@@ -83,6 +84,19 @@ TRANSLATE_QPS=1.0
 TRANSLATE_TARGET=en
 TRANSLATE_SOURCE=zh
 TRANSLATE_USE_GENERAL=y
+
+# Optional glossary settings
+GLOSSARY_FILE=config/cad_glossary_zh-en.json
+# GLOSSARY_JSON={"terms":["ODF","PDU"],"translations":{"主柜":"Main Cabinet"}}
+
+# Optional service/container path settings
+CADAIR_OUTPUT_ROOT=/data/deliveries/apps
+CADAIR_UPLOAD_ROOT=/data/uploads
+CADAIR_ALLOWED_INPUT_ROOTS=/data/uploads,/data/document-intelligence,/data/deliveries
+CADAIR_WORK_ROOT=/data/deliveries/apps/cadair_translate/_work
+CADAIR_LOG_DIR=/data/deliveries/apps/cadair_translate/_logs
+CADAIR_ODA_RUNTIME_DIR=/tmp/runtime-cadair
+CADAIR_ODA_TIMEOUT_SECONDS=120
 ```
 
 ### 5. Configure ODA path in code
@@ -104,6 +118,8 @@ manager = TranslationManager(oda_path="/path/to/ODAFileConverter.AppImage")
 ```
 CADAir/
 ├── docs/                   # Work summaries and TODOs
+│   └── integration/        # AI platform integration standards
+├── TODO_INTEGRATION.md     # FastAPI/Docker/Gateway integration plan
 ├── cadair/                 # Project-level CLI and CAD utilities
 │   ├── cli.py             # `cadair` command entry point
 │   ├── oda.py             # Direct ODA DWG to DXF converter
@@ -205,6 +221,19 @@ cadair translate tests/data/simple_case.oda.dxf /tmp/simple_case.mock.dxf \
   --keep-work-files
 ```
 
+For service or container execution, keep uploaded inputs read-only and place intermediate files under a writable work root:
+
+```bash
+CADAIR_WORK_ROOT=/data/deliveries/apps/cadair_translate/_work \
+  cadair translate /data/uploads/input.dwg \
+  /data/deliveries/apps/cadair_translate/user/2026-05-07/req_001/input_translated.dxf \
+  --engine baidu_general \
+  --source zh \
+  --target en
+```
+
+`CADAIR_WORK_ROOT` is optional for local CLI usage. If it is not set, CADAir keeps the historical default and writes intermediate files to `<input_dir>/.cadair-work`.
+
 List translation engines:
 
 ```bash
@@ -266,6 +295,32 @@ The workflow is:
 This preserves complex `MULTILEADER` arrows, labels, proxy graphics, and context data that some CAD viewers rely on. See [the work summary](docs/WORK_SUMMARY_2026-05-06.md) for the root-cause analysis and verification details.
 
 Raw DXF reads and writes use lightweight header-based encoding detection. R2007+ DXF files (`AC1021` and newer) are treated as UTF-8, while older DXF files use `$DWGCODEPAGE` mappings such as `ANSI_936` → `gbk`.
+
+### Service Integration Notes
+
+CADAir is being prepared for AI platform integration as a FastAPI microservice. The current integration plan is tracked in [TODO_INTEGRATION.md](TODO_INTEGRATION.md).
+
+The planned service contract follows the internal Python application standards in `docs/integration/`:
+
+- Gateway uploads input CAD files under `/data/uploads`.
+- CADAir reads only from configured platform input roots such as `/data/uploads`, `/data/document-intelligence`, and `/data/deliveries`.
+- CADAir writes deliverables under `/data/deliveries/apps/cadair_translate/<user_id>/<yyyy-mm-dd>/<request_id>/`.
+- CADAir returns output file paths to Gateway; Gateway owns OneDrive delivery.
+- Request-level glossary configuration should use `params.glossary_json` or `params.glossary_file`.
+
+Relevant environment variables:
+
+```env
+CADAIR_OUTPUT_ROOT=/data/deliveries/apps
+CADAIR_UPLOAD_ROOT=/data/uploads
+CADAIR_ALLOWED_INPUT_ROOTS=/data/uploads,/data/document-intelligence,/data/deliveries
+CADAIR_WORK_ROOT=/data/deliveries/apps/cadair_translate/_work
+CADAIR_LOG_DIR=/data/deliveries/apps/cadair_translate/_logs
+CADAIR_ODA_RUNTIME_DIR=/tmp/runtime-cadair
+CADAIR_ODA_TIMEOUT_SECONDS=120
+```
+
+`CADAIR_LOG_DIR` is optional. If it is unset, CADAir logs to the process stream and does not create `translation.log` in the repository root.
 
 ### Text Layout Diagnostics and Shrink
 

@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 from pathlib import Path
 from typing import Optional, Dict, Any, Callable, List
 from .core import DWGCore
@@ -10,13 +11,19 @@ from .translator import TranslationEngine, MockTranslator
 from .translation_cache import get_shared_cache, TranslationCache
 from .translation_filter import should_translate_text
 
+def _logging_handlers():
+    handlers = [logging.StreamHandler()]
+    log_dir = os.getenv('CADAIR_LOG_DIR')
+    if log_dir:
+        Path(log_dir).mkdir(parents=True, exist_ok=True)
+        handlers.append(logging.FileHandler(Path(log_dir) / 'translation.log', encoding='utf-8'))
+    return handlers
+
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('translation.log', encoding='utf-8'),
-        logging.StreamHandler()
-    ]
+    handlers=_logging_handlers()
 )
 logger = logging.getLogger(__name__)
 
@@ -25,10 +32,11 @@ class TranslationManager:
     """翻译流程管理器 - 整合所有模块，支持同步和异步翻译"""
     
     def __init__(self, oda_path: str,
+                 oda_timeout: Optional[int] = None,
                  glossary: Optional[GlossaryInput] = None,
                  glossary_json: Optional[str] = None,
                  glossary_file: Optional[str] = None):
-        self.core = DWGCore(oda_path)
+        self.core = DWGCore(oda_path, oda_timeout=oda_timeout)
         self.extractor = TextExtractor()
         self.writer = TextWriter()
         self.translator: Optional[TranslationEngine] = None

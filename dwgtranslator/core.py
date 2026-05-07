@@ -13,11 +13,13 @@ from typing import Optional
 class DWGCore:
     """DWG/DXF 核心读写模块"""
     
-    def __init__(self, oda_path: str):
+    def __init__(self, oda_path: str, oda_timeout: Optional[int] = None):
         if not oda_path:
             raise ValueError("必须指定ODA File Converter路径")
         
         self.oda_path = oda_path
+        self.oda_timeout = oda_timeout or int(os.getenv('CADAIR_ODA_TIMEOUT_SECONDS', '120'))
+        self.runtime_dir = os.getenv('XDG_RUNTIME_DIR') or os.getenv('CADAIR_ODA_RUNTIME_DIR', '/tmp/runtime-cadair')
         self._use_xvfb = False
         self.last_converted_dxf: Optional[str] = None
         self._setup_oda()
@@ -30,9 +32,9 @@ class DWGCore:
             else:
                 ezdxf.options.set("odafc-addon", "lin_exec_path", self.oda_path)
                 self._use_xvfb = self._check_needs_xvfb()
-                os.environ['XDG_RUNTIME_DIR'] = '/tmp/runtime-chongjibo'
+                os.environ['XDG_RUNTIME_DIR'] = self.runtime_dir
                 os.environ['LIBGL_ALWAYS_SOFTWARE'] = '1'
-                os.makedirs('/tmp/runtime-chongjibo', exist_ok=True)
+                os.makedirs(self.runtime_dir, exist_ok=True)
             print(f"ODA已配置: {self.oda_path}")
         else:
             print(f"警告: ODA路径不存在: {self.oda_path}")
@@ -92,9 +94,9 @@ class DWGCore:
             ]
             
             env = os.environ.copy()
-            env['XDG_RUNTIME_DIR'] = '/tmp/runtime-chongjibo'
+            env['XDG_RUNTIME_DIR'] = self.runtime_dir
             env['LIBGL_ALWAYS_SOFTWARE'] = '1'
-            os.makedirs('/tmp/runtime-chongjibo', exist_ok=True)
+            os.makedirs(self.runtime_dir, exist_ok=True)
             
             # 根据环境自动决定是否使用xvfb
             if self._use_xvfb and shutil.which('xvfb-run'):
@@ -108,7 +110,7 @@ class DWGCore:
                     capture_output=True,
                     text=True,
                     env=env,
-                    timeout=60
+                    timeout=self.oda_timeout
                 )
                 
                 out_file = Path(tmp_dir) / infile.with_suffix('.dxf').name

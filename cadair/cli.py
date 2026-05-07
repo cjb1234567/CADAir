@@ -65,6 +65,9 @@ def target_lang(args: argparse.Namespace) -> str:
 
 
 def default_work_dir(input_path: Path) -> Path:
+    work_root = env("CADAIR_WORK_ROOT")
+    if work_root:
+        return Path(work_root) / input_path.stem
     return input_path.parent / ".cadair-work"
 
 
@@ -148,21 +151,21 @@ def create_translator(args: argparse.Namespace):
     raise ValueError(f"unknown translation engine: {engine}")
 
 
-def source_dxf_for_writeback(input_path: Path, oda_path: str | None) -> Path:
+def source_dxf_for_writeback(input_path: Path, oda_path: str | None, work_dir: Path | None = None) -> Path:
     if input_path.suffix.lower() == ".dxf":
         return input_path
     if input_path.suffix.lower() != ".dwg":
         raise ValueError(f"input must be DWG or DXF: {input_path}")
-    work_dir = default_work_dir(input_path)
+    work_dir = work_dir or default_work_dir(input_path)
     work_dir.mkdir(parents=True, exist_ok=True)
     converted = work_dir / f"{input_path.stem}.oda.dxf"
     return convert_dwg_to_dxf(input_path, converted, Path(require_oda_path(oda_path)))
 
 
-def run_writeback(input_path: Path, translated_json: Path, output_path: Path, oda_path: str | None) -> int:
+def run_writeback(input_path: Path, translated_json: Path, output_path: Path, oda_path: str | None, work_dir: Path | None = None) -> int:
     if output_path is None:
         raise ValueError("OUTPUT is required unless --extract-only is used")
-    source_dxf = source_dxf_for_writeback(input_path, oda_path)
+    source_dxf = source_dxf_for_writeback(input_path, oda_path, work_dir)
     writer = TextWriter()
     writer.load_from_json(str(translated_json))
     patched = writer.patch_dxf_file(str(source_dxf), str(output_path))
@@ -177,7 +180,7 @@ def run_full_translate(args: argparse.Namespace) -> int:
 
     run_extract(args.input, extract_json, args.oda_path)
     run_translate_json(args, extract_json, translated_json)
-    run_writeback(args.input, translated_json, args.output, args.oda_path)
+    run_writeback(args.input, translated_json, args.output, args.oda_path, work_dir)
 
     if args.keep_work_files:
         print(f"work_files={extract_json},{translated_json}")
@@ -192,7 +195,7 @@ def run_translate(args: argparse.Namespace) -> int:
     if args.output is None:
         raise ValueError("OUTPUT is required unless --extract-only is used")
     if args.writeback_only:
-        return run_writeback(args.input, args.writeback_only, args.output, args.oda_path)
+        return run_writeback(args.input, args.writeback_only, args.output, args.oda_path, args.work_dir)
     return run_full_translate(args)
 
 

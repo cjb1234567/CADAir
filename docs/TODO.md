@@ -4,20 +4,17 @@ Last updated: 2026-05-07
 
 ## High Priority
 
-- [ ] Split async translation logging into API request count and handle writeback count.
-
 ## Medium Priority
 
 - [ ] Normalize internal CJK spacing for glossary lookup so formatted CAD labels such as `运    行` can match `运行`.
-- [ ] Improve long translation layout handling.
 - [ ] Add optional text wrapping for `MTEXT` and `MULTILEADER` output.
-- [ ] Add width/height adaptation for translated `TEXT` where safe.
 - [ ] Add per-entity logging for patched group codes and skipped handles.
 - [ ] Add a validation tool that checks DXF code/value line pairing inside patched entity ranges.
 - [ ] Add an option to preserve original text when the translator returns incomplete or suspicious output.
 
 ## Low Priority
 
+- [ ] Split async translation logging into API request count and handle writeback count.
 - [ ] Add CLI commands for common workflows.
 - [ ] Add documentation for `.env` configuration and ODA troubleshooting.
 - [ ] Add sample screenshots or viewer validation notes.
@@ -45,3 +42,6 @@ Last updated: 2026-05-07
 - [x] Added fixed glossary translations that are applied before cache lookup, filtering, and API calls.
 - [x] Added direction-named zh-to-en glossary config at `config/cad_glossary_zh-en.json`.
 - [x] Verified `examples/baidu_async_translate.py` with `--glossary-file config/cad_glossary_zh-en.json`, producing `data/20260123_translated_translated.dxf` with `327/327` direct patch writebacks.
+- [x] Added `dwg-utils/check_text_layout.py` to detect translated text overflow against nearby frame/table containers using `ezdxf.addons.text2path`.
+- [x] Added `dwg-utils/shrink_text_layout.py` to safely shrink overflowing `TEXT` height by raw DXF group code `40` patching with minimum height/scale limits.
+- [x] Generated and verified `data/20260123_translated_shrunk.dxf`; `ezdxf.readfile()` opens it successfully and layout overflows dropped from `124` to `109` under conservative shrink limits.

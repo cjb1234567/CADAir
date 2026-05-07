@@ -16,12 +16,16 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - ✅ **Async Translation with Concurrency Control** — QPS limiting, max concurrent requests
 - ✅ **Environment Variables Support** — Configure via `.env` file
 - ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG/DXF output and patches DXF text directly
+- ✅ **Text Layout Diagnostics** — Detect translated text overflow against nearby frame/table containers
+- ✅ **Safe TEXT Shrink Utility** — Shrink overflowing `TEXT` height by raw DXF patching with minimum size limits
 
 ## Documentation
 
 - [Work Summary: DWG Translation Roundtrip Fix](docs/WORK_SUMMARY_2026-05-06.md)
 - [Work Summary: DXF Non-Roundtrip Patch Output](docs/WORK_SUMMARY_DXF_NON_ROUNDTRIP_2026-05-06.md)
 - [Work Summary: Translation Filtering](docs/WORK_SUMMARY_TRANSLATION_FILTERING_2026-05-06.md)
+- [Work Summary: Glossary Configuration and Fixed CAD Translations](docs/WORK_SUMMARY_GLOSSARY_CONFIG_2026-05-07.md)
+- [Work Summary: Text Layout Overflow Detection and Safe Shrink](docs/WORK_SUMMARY_TEXT_LAYOUT_SHRINK_2026-05-07.md)
 - [TODO](docs/TODO.md)
 
 ## Requirements
@@ -112,6 +116,8 @@ CADAir/
 │       └── baidu.py       # Baidu Translation API plugins
 ├── dwg-utils/              # Standalone DWG/DXF utilities
 │   ├── dwg_to_dxf.py      # Direct ODA DWG to DXF converter
+│   ├── check_text_layout.py # Detect text overflow against nearby frame/table containers
+│   ├── shrink_text_layout.py # Raw DXF TEXT height shrinker with minimum limits
 │   ├── dwg2json.py
 │   └── text_reader.py
 ├── data/                   # DWG/DXF/JSON data files
@@ -196,6 +202,54 @@ The workflow is:
 This preserves complex `MULTILEADER` arrows, labels, proxy graphics, and context data that some CAD viewers rely on. See [the work summary](docs/WORK_SUMMARY_2026-05-06.md) for the root-cause analysis and verification details.
 
 Raw DXF reads and writes use lightweight header-based encoding detection. R2007+ DXF files (`AC1021` and newer) are treated as UTF-8, while older DXF files use `$DWGCODEPAGE` mappings such as `ANSI_936` → `gbk`.
+
+### Text Layout Diagnostics and Shrink
+
+Translated English text can exceed the original CAD title block or table cell. `dwg-utils/check_text_layout.py` provides a read-only diagnostic pass that uses `ezdxf.readfile()` plus `ezdxf.addons.text2path` to estimate text bounding boxes, infers nearby axis-aligned containers from `LINE`/`LWPOLYLINE`, and reports overflow with a required scale.
+
+Focused check:
+
+```bash
+.venv/bin/python dwg-utils/check_text_layout.py \
+  data/20260123_translated_translated.dxf \
+  --contains "Installation diagram of energy management" \
+  --limit 20
+```
+
+Full JSON report:
+
+```bash
+.venv/bin/python dwg-utils/check_text_layout.py \
+  data/20260123_translated_translated.dxf \
+  --json /tmp/opencode/text_layout_report.json
+```
+
+`dwg-utils/shrink_text_layout.py` uses the same detection logic and patches only `TEXT` group code `40` height in raw DXF text. It does not call `ezdxf.saveas()`, split text, convert entities, move text, or modify `MULTILEADER` geometry.
+
+Dry run:
+
+```bash
+.venv/bin/python dwg-utils/shrink_text_layout.py \
+  data/20260123_translated_translated.dxf \
+  --dry-run \
+  --scale-threshold 0.8 \
+  --min-height 2.0 \
+  --min-scale 0.65
+```
+
+Generate a shrunk DXF:
+
+```bash
+.venv/bin/python dwg-utils/shrink_text_layout.py \
+  data/20260123_translated_translated.dxf \
+  data/20260123_translated_shrunk.dxf \
+  --scale-threshold 0.8 \
+  --min-height 2.0 \
+  --min-scale 0.65 \
+  --json /tmp/opencode/20260123_translated_shrunk_report.json
+```
+
+The shrink utility is intentionally conservative. If the required scale is below the configured minimum, the text is clamped to the minimum and may still be reported as overflowing. In those cases, prefer shorter glossary translations over unreadably small text.
 
 ### Available Translation Engines
 
@@ -400,6 +454,8 @@ CADAir/
 │       └── baidu.py       # Baidu Translation API plugins
 ├── dwg-utils/              # Standalone utilities
 │   ├── dwg_to_dxf.py      # ODA direct converter
+│   ├── check_text_layout.py # Text overflow diagnostics
+│   ├── shrink_text_layout.py # Safe TEXT height shrinker
 │   ├── dwg2json.py
 │   └── text_reader.py
 ├── data/                   # All DWG/DXF/JSON data files

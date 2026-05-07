@@ -4,7 +4,9 @@ Last updated: 2026-05-07
 
 ## High Priority
 
-- [ ] Provide a FastAPI wrapper and Dockerfile so CADAir can be packaged as a microservice tool and integrated into the existing AI panel, following `docs/integration/PYTHON-SCENARIO-INTEGRATION-STANDARD.zh-CN.md` and `docs/integration/PYTHON-APP-MAINTENANCE-DIRECTORY-DESIGN.zh-CN.md`.
+- [ ] Add Dockerfile and root `docker-compose.yml` for the FastAPI CADAir service.
+- [ ] Add `app-integrations/cadair-translate/` metadata and Gateway integration assets.
+- [ ] Improve Baidu translator upstream error logging with status/error codes while avoiding credential leakage.
 
 ## Medium Priority
 
@@ -23,6 +25,10 @@ Last updated: 2026-05-07
 
 ## Completed
 
+- [x] Added FastAPI HTTP service v1 with `GET /health` and synchronous `POST /v1/run` endpoints in `cadair/service.py`.
+- [x] Added HTTP service request/response schemas in `cadair/service_schemas.py`.
+- [x] Added HTTP service API coverage in `tests/test_service_api.py` and verified mock plus `baidu_field` DWG smoke runs.
+- [x] Documented HTTP service v1 validation in `docs/WORK_SUMMARY_HTTP_SERVICE_V1_2026-05-07.md` and `TODO_INTEGRATION.md`.
 - [x] Confirmed ODA direct DWG to DXF conversion preserves target `MULTILEADER` display.
 - [x] Confirmed zero-change `ezdxf.readfile()` plus `doc.saveas()` breaks target `MULTILEADER` display.
 - [x] Added direct ODA conversion utility at `cadair/oda.py` and exposed it via `cadair convert`.

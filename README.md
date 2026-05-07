@@ -18,6 +18,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - ✅ **MULTILEADER Preservation** — Avoids `ezdxf.saveas()` roundtrip for DWG/DXF output and patches DXF text directly
 - ✅ **Text Layout Diagnostics** — Detect translated text overflow against nearby frame/table containers
 - ✅ **Safe TEXT Shrink Utility** — Shrink overflowing `TEXT` height by raw DXF patching with minimum size limits
+- ✅ **FastAPI HTTP Service V1** — `GET /health` and synchronous `POST /v1/run` for Gateway-driven CAD translation
 
 ## Documentation
 
@@ -28,6 +29,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - [Work Summary: Text Layout Overflow Detection and Safe Shrink](docs/WORK_SUMMARY_TEXT_LAYOUT_SHRINK_2026-05-07.md)
 - [Work Summary: Unified CADAir CLI](docs/WORK_SUMMARY_CADAIR_CLI_2026-05-07.md)
 - [Work Summary: Service Integration Audit Cleanup](docs/WORK_SUMMARY_SERVICE_INTEGRATION_AUDIT_2026-05-07.md)
+- [Work Summary: HTTP Service V1](docs/WORK_SUMMARY_HTTP_SERVICE_V1_2026-05-07.md)
 - [TODO](docs/TODO.md)
 
 ## Requirements
@@ -122,6 +124,8 @@ CADAir/
 ├── TODO_INTEGRATION.md     # FastAPI/Docker/Gateway integration plan
 ├── cadair/                 # Project-level CLI and CAD utilities
 │   ├── cli.py             # `cadair` command entry point
+│   ├── service.py         # FastAPI HTTP service entry point
+│   ├── service_schemas.py # HTTP service Pydantic request/response models
 │   ├── oda.py             # Direct ODA DWG to DXF converter
 │   └── layout.py          # Text overflow diagnostics and TEXT shrinker
 ├── dwgtranslator/          # Modular DWG translation package
@@ -298,15 +302,53 @@ Raw DXF reads and writes use lightweight header-based encoding detection. R2007+
 
 ### Service Integration Notes
 
-CADAir is being prepared for AI platform integration as a FastAPI microservice. The current integration plan is tracked in [TODO_INTEGRATION.md](TODO_INTEGRATION.md).
+CADAir includes a FastAPI HTTP service for AI platform integration. The current integration plan and remaining packaging work are tracked in [TODO_INTEGRATION.md](TODO_INTEGRATION.md).
 
-The planned service contract follows the internal Python application standards in `docs/integration/`:
+Run the service locally:
+
+```bash
+uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8101
+```
+
+Health check:
+
+```bash
+curl http://127.0.0.1:8101/health
+```
+
+Synchronous translation request:
+
+```bash
+curl -X POST http://127.0.0.1:8101/v1/run \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "request_id": "req_001",
+    "skill_id": "cadair_translate",
+    "input": {
+      "files": [
+        {"path": "/data/uploads/input.dwg", "filename": "input.dwg"}
+      ]
+    },
+    "params": {
+      "engine": "baidu_general",
+      "source": "zh",
+      "target": "en",
+      "layout_check": true,
+      "shrink": true
+    },
+    "context": {"user_id": "user_001"}
+  }'
+```
+
+The service contract follows the internal Python application standards in `docs/integration/`:
 
 - Gateway uploads input CAD files under `/data/uploads`.
 - CADAir reads only from configured platform input roots such as `/data/uploads`, `/data/document-intelligence`, and `/data/deliveries`.
 - CADAir writes deliverables under `/data/deliveries/apps/cadair_translate/<user_id>/<yyyy-mm-dd>/<request_id>/`.
 - CADAir returns output file paths to Gateway; Gateway owns OneDrive delivery.
 - Request-level glossary configuration should use `params.glossary_json` or `params.glossary_file`.
+
+The first HTTP service version is intentionally synchronous and exposes only `GET /health` and `POST /v1/run`. Async jobs, Docker packaging, and Gateway app metadata are tracked as follow-up integration tasks.
 
 Relevant environment variables:
 

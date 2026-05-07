@@ -53,7 +53,7 @@ Changed files:
 - `dwgtranslator/extract.py`
 - `dwgtranslator/manager.py`
 - `dwgtranslator/writeback.py`
-- `dwg-utils/dwg_to_dxf.py`
+- `cadair/oda.py`
 
 Key changes:
 
@@ -62,7 +62,7 @@ Key changes:
 - `TextExtractor.extract_raw_multileaders()` supplements `MULTILEADER` entities from the raw DXF.
 - `TextWriter.patch_dxf_file()` patches text directly without using `ezdxf.saveas()`.
 - `TranslationManager` uses the direct patch output path for DWG input.
-- `dwg-utils/dwg_to_dxf.py` provides a standalone ODA conversion tool for diagnostics.
+- `cadair convert` provides a standalone ODA conversion tool for diagnostics.
 
 Patched group codes:
 
@@ -90,7 +90,7 @@ Line break handling:
 Direct ODA conversion:
 
 ```bash
-uv run python dwg-utils/dwg_to_dxf.py data/20260123.dwg data/20260123_oda_direct.dxf
+cadair convert data/20260123.dwg data/20260123_oda_direct.dxf
 ```
 
 Result:

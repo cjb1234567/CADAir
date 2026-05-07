@@ -15,7 +15,6 @@ Last updated: 2026-05-07
 ## Low Priority
 
 - [ ] Split async translation logging into API request count and handle writeback count.
-- [ ] Add CLI commands for common workflows.
 - [ ] Add documentation for `.env` configuration and ODA troubleshooting.
 - [ ] Add sample screenshots or viewer validation notes.
 - [ ] Add a cleanup command for generated diagnostic DXF files.
@@ -24,7 +23,7 @@ Last updated: 2026-05-07
 
 - [x] Confirmed ODA direct DWG to DXF conversion preserves target `MULTILEADER` display.
 - [x] Confirmed zero-change `ezdxf.readfile()` plus `doc.saveas()` breaks target `MULTILEADER` display.
-- [x] Added direct ODA conversion utility at `dwg-utils/dwg_to_dxf.py`.
+- [x] Added direct ODA conversion utility at `cadair/oda.py` and exposed it via `cadair convert`.
 - [x] Added raw DXF `MULTILEADER` extraction from group code `304`.
 - [x] Added direct DXF text patching to avoid final `ezdxf.saveas()` for DWG input.
 - [x] Fixed DXF patcher scanning to respect code/value line pairs.
@@ -42,6 +41,9 @@ Last updated: 2026-05-07
 - [x] Added fixed glossary translations that are applied before cache lookup, filtering, and API calls.
 - [x] Added direction-named zh-to-en glossary config at `config/cad_glossary_zh-en.json`.
 - [x] Verified `examples/baidu_async_translate.py` with `--glossary-file config/cad_glossary_zh-en.json`, producing `data/20260123_translated_translated.dxf` with `327/327` direct patch writebacks.
-- [x] Added `dwg-utils/check_text_layout.py` to detect translated text overflow against nearby frame/table containers using `ezdxf.addons.text2path`.
-- [x] Added `dwg-utils/shrink_text_layout.py` to safely shrink overflowing `TEXT` height by raw DXF group code `40` patching with minimum height/scale limits.
+- [x] Added `cadair layout` to detect translated text overflow against nearby frame/table containers using `ezdxf.addons.text2path`.
+- [x] Added `cadair layout --shrink` to safely shrink overflowing `TEXT` height by raw DXF group code `40` patching with minimum height/scale limits.
+- [x] Added unified `cadair` CLI with `convert`, `translate`, `layout`, and `engines` commands.
+- [x] Removed obsolete `dwg-utils/dwg_to_dxf.py`, `dwg-utils/check_text_layout.py`, and `dwg-utils/shrink_text_layout.py` entry points after migrating their capabilities into `cadair`.
+- [x] Documented the unified CLI in `docs/WORK_SUMMARY_CADAIR_CLI_2026-05-07.md` and README.
 - [x] Generated and verified `data/20260123_translated_shrunk.dxf`; `ezdxf.readfile()` opens it successfully and layout overflows dropped from `124` to `109` under conservative shrink limits.

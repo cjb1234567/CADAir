@@ -9,3 +9,6 @@ dependencies = [
     "ezdxf>=1.4.3",
     "python-dotenv>=1.2.2",
 ]
+
+[project.scripts]
+cadair = "cadair.cli:main"

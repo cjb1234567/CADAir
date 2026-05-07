@@ -26,6 +26,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 - [Work Summary: Translation Filtering](docs/WORK_SUMMARY_TRANSLATION_FILTERING_2026-05-06.md)
 - [Work Summary: Glossary Configuration and Fixed CAD Translations](docs/WORK_SUMMARY_GLOSSARY_CONFIG_2026-05-07.md)
 - [Work Summary: Text Layout Overflow Detection and Safe Shrink](docs/WORK_SUMMARY_TEXT_LAYOUT_SHRINK_2026-05-07.md)
+- [Work Summary: Unified CADAir CLI](docs/WORK_SUMMARY_CADAIR_CLI_2026-05-07.md)
 - [TODO](docs/TODO.md)
 
 ## Requirements
@@ -103,6 +104,10 @@ manager = TranslationManager(oda_path="/path/to/ODAFileConverter.AppImage")
 ```
 CADAir/
 ├── docs/                   # Work summaries and TODOs
+├── cadair/                 # Project-level CLI and CAD utilities
+│   ├── cli.py             # `cadair` command entry point
+│   ├── oda.py             # Direct ODA DWG to DXF converter
+│   └── layout.py          # Text overflow diagnostics and TEXT shrinker
 ├── dwgtranslator/          # Modular DWG translation package
 │   ├── __init__.py
 │   ├── core.py            # DWG/DXF I/O, ODA conversion, encoding, fonts
@@ -114,10 +119,7 @@ CADAir/
 │   └── plugins/
 │       ├── __init__.py
 │       └── baidu.py       # Baidu Translation API plugins
-├── dwg-utils/              # Standalone DWG/DXF utilities
-│   ├── dwg_to_dxf.py      # Direct ODA DWG to DXF converter
-│   ├── check_text_layout.py # Detect text overflow against nearby frame/table containers
-│   ├── shrink_text_layout.py # Raw DXF TEXT height shrinker with minimum limits
+├── dwg-utils/              # Additional standalone DWG/DXF utilities
 │   ├── dwg2json.py
 │   └── text_reader.py
 ├── data/                   # DWG/DXF/JSON data files
@@ -147,6 +149,68 @@ Supported entities:
 Output: `data/output.json`
 
 ## DWG Text Translation
+
+### CLI
+
+CADAir exposes the main workflows through the `cadair` command:
+
+```bash
+cadair --help
+```
+
+Available commands:
+
+| Command | Purpose |
+|---|---|
+| `cadair convert` | Convert DWG to DXF through ODA File Converter |
+| `cadair translate` | Extract, translate, and raw-patch CAD text into DXF output |
+| `cadair layout` | Check text overflow and optionally shrink overflowing `TEXT` |
+| `cadair engines` | List registered translation engines |
+
+Convert DWG to DXF:
+
+```bash
+cadair convert data/20260123.dwg data/20260123.oda.dxf --oda-path "$ODA_PATH"
+```
+
+Translate CAD text and write a DXF output:
+
+```bash
+cadair translate data/20260123.dwg data/20260123_translated.dxf \
+  --engine baidu_general \
+  --source zh \
+  --target en \
+  --glossary-file config/cad_glossary_zh-en.json
+```
+
+Extract text for manual translation:
+
+```bash
+cadair translate data/input.dwg --extract-only data/translation_work.json
+```
+
+Write a manually translated JSON file back to DXF:
+
+```bash
+cadair translate data/input.dwg data/output.dxf --writeback-only data/translation_work.json
+```
+
+Run a complete mock translation while keeping intermediate JSON files:
+
+```bash
+cadair translate tests/data/simple_case.oda.dxf /tmp/simple_case.mock.dxf \
+  --engine mock \
+  --mock-prefix TT:: \
+  --work-dir /tmp/cadair-work \
+  --keep-work-files
+```
+
+List translation engines:
+
+```bash
+cadair engines
+cadair engines --json
+```
 
 ### Modular Plugin Architecture
 
@@ -205,12 +269,12 @@ Raw DXF reads and writes use lightweight header-based encoding detection. R2007+
 
 ### Text Layout Diagnostics and Shrink
 
-Translated English text can exceed the original CAD title block or table cell. `dwg-utils/check_text_layout.py` provides a read-only diagnostic pass that uses `ezdxf.readfile()` plus `ezdxf.addons.text2path` to estimate text bounding boxes, infers nearby axis-aligned containers from `LINE`/`LWPOLYLINE`, and reports overflow with a required scale.
+Translated English text can exceed the original CAD title block or table cell. `cadair layout` provides a read-only diagnostic pass that uses `ezdxf.readfile()` plus `ezdxf.addons.text2path` to estimate text bounding boxes, infers nearby axis-aligned containers from `LINE`/`LWPOLYLINE`, and reports overflow with a required scale.
 
 Focused check:
 
 ```bash
-.venv/bin/python dwg-utils/check_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
   --contains "Installation diagram of energy management" \
   --limit 20
@@ -219,19 +283,19 @@ Focused check:
 Full JSON report:
 
 ```bash
-.venv/bin/python dwg-utils/check_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
   --json /tmp/opencode/text_layout_report.json
 ```
 
-`dwg-utils/shrink_text_layout.py` uses the same detection logic and patches only `TEXT` group code `40` height in raw DXF text. It does not call `ezdxf.saveas()`, split text, convert entities, move text, or modify `MULTILEADER` geometry.
+`cadair layout --shrink` uses the same detection logic and patches only `TEXT` group code `40` height in raw DXF text. It does not call `ezdxf.saveas()`, split text, convert entities, move text, or modify `MULTILEADER` geometry.
 
 Dry run:
 
 ```bash
-.venv/bin/python dwg-utils/shrink_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
-  --dry-run \
+  --shrink \
   --scale-threshold 0.8 \
   --min-height 2.0 \
   --min-scale 0.65
@@ -240,9 +304,10 @@ Dry run:
 Generate a shrunk DXF:
 
 ```bash
-.venv/bin/python dwg-utils/shrink_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
   data/20260123_translated_shrunk.dxf \
+  --shrink \
   --scale-threshold 0.8 \
   --min-height 2.0 \
   --min-scale 0.65 \
@@ -250,6 +315,8 @@ Generate a shrunk DXF:
 ```
 
 The shrink utility is intentionally conservative. If the required scale is below the configured minimum, the text is clamped to the minimum and may still be reported as overflowing. In those cases, prefer shorter glossary translations over unreadably small text.
+
+See [the CLI work summary](docs/WORK_SUMMARY_CADAIR_CLI_2026-05-07.md) for command design notes and regression checks.
 
 ### Available Translation Engines
 
@@ -440,6 +507,10 @@ stats = manager.get_cache_stats()
 ```
 CADAir/
 ├── docs/                   # Work summaries and TODOs
+├── cadair/                 # CLI and project-level CAD utilities
+│   ├── cli.py             # `cadair` command entry point
+│   ├── oda.py             # Direct ODA DWG to DXF converter
+│   └── layout.py          # Text overflow diagnostics and TEXT shrinker
 ├── dwgtranslator/          # Translation package
 │   ├── __init__.py
 │   ├── core.py            # DWG/DXF I/O and ODA conversion
@@ -452,10 +523,7 @@ CADAir/
 │   └── plugins/
 │       ├── __init__.py
 │       └── baidu.py       # Baidu Translation API plugins
-├── dwg-utils/              # Standalone utilities
-│   ├── dwg_to_dxf.py      # ODA direct converter
-│   ├── check_text_layout.py # Text overflow diagnostics
-│   ├── shrink_text_layout.py # Safe TEXT height shrinker
+├── dwg-utils/              # Additional standalone utilities
 │   ├── dwg2json.py
 │   └── text_reader.py
 ├── data/                   # All DWG/DXF/JSON data files

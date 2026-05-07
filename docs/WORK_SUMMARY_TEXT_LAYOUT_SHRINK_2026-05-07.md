@@ -8,8 +8,7 @@ Detect translated CAD text that exceeds nearby frame/table cell boundaries and p
 
 ## Changes
 
-- Added `dwg-utils/check_text_layout.py`.
-- Added `dwg-utils/shrink_text_layout.py`.
+- Added text layout checking and safe shrinking, now exposed through `cadair layout` and implemented in `cadair/layout.py`.
 - Used `ezdxf.readfile()` for analysis only.
 - Used `ezdxf.addons.text2path` to compute text path bounding boxes where available.
 - Inferred rectangular text containers from nearby horizontal/vertical `LINE` and `LWPOLYLINE` segments in the same layout/block.
@@ -28,7 +27,7 @@ Detect translated CAD text that exceeds nearby frame/table cell boundaries and p
 Focused check for a known long title:
 
 ```bash
-.venv/bin/python dwg-utils/check_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
   --contains "Installation diagram of energy management" \
   --json /tmp/opencode/installation_layout_report.json \
@@ -65,9 +64,9 @@ Filtering out `scale=1.0` left 65 stronger overflow candidates.
 Dry-run example:
 
 ```bash
-.venv/bin/python dwg-utils/shrink_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
-  --dry-run \
+  --shrink \
   --scale-threshold 0.8 \
   --min-height 2.0 \
   --min-scale 0.65
@@ -76,9 +75,10 @@ Dry-run example:
 Generate a new DXF:
 
 ```bash
-.venv/bin/python dwg-utils/shrink_text_layout.py \
+cadair layout \
   data/20260123_translated_translated.dxf \
   data/20260123_translated_shrunk.dxf \
+  --shrink \
   --scale-threshold 0.8 \
   --min-height 2.0 \
   --min-scale 0.65 \

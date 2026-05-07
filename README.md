@@ -287,6 +287,59 @@ uv run python examples/baidu_async_translate.py data/20260123.dwg
 
 *Translation filtering: Non-translatable CAD labels are skipped before cache lookup and API calls, reducing API usage and preserving stable identifiers.*
 
+**Custom glossary / allowlist**:
+```python
+from dwgtranslator import TranslationManager
+
+manager = TranslationManager(
+    oda_path="/path/to/ODAFileConverter",
+    glossary=["ODF", "PDU", "CCU", "ETH", "RUN", "ALM", "PWR"],
+)
+```
+
+Glossary entries can also include fixed translations. Exact matches in `translations` are written directly without calling the translation API; exact matches in `terms` are skipped and preserved as-is.
+
+Glossary config can be passed as JSON text or loaded from a JSON file:
+
+```python
+manager = TranslationManager(
+    oda_path="/path/to/ODAFileConverter",
+    glossary_json='["ODF", "PDU", "主柜"]',
+    glossary_file="config/cad_glossary_zh-en.json",
+)
+```
+
+Supported file formats:
+
+```json
+["ODF", "PDU", "主柜"]
+```
+
+```json
+{
+  "terms": ["ODF", "PDU"],
+  "translations": {
+    "主柜": "Main Cabinet",
+    "备用柜": "Standby Cabinet"
+  }
+}
+```
+
+For the async Baidu example, glossary can be supplied from `.env` or CLI:
+
+```bash
+uv run python examples/baidu_async_translate.py data/input.dwg --glossary-json ODF,PDU,主柜
+uv run python examples/baidu_async_translate.py data/input.dwg --glossary-file config/cad_glossary_zh-en.json
+```
+
+Verified zh-to-en run with the bundled glossary config:
+
+```bash
+.venv/bin/python examples/baidu_async_translate.py data/20260123.dwg --glossary-file config/cad_glossary_zh-en.json
+```
+
+This produced `data/20260123_translated_translated.dxf`, patched `327/327` translated handles, and showed fixed glossary output such as `电源分配单元 -> Power Distribution Unit`.
+
 ### Adding New Translation Plugins
 
 ```python

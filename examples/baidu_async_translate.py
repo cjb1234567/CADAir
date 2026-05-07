@@ -1,4 +1,5 @@
 """示例8: 百度异步翻译API - 支持并发控制和QPS限制"""
+import argparse
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -14,7 +15,7 @@ from dwgtranslator import TranslationManager, TranslationEngineFactory
 from dwgtranslator.plugins.baidu import AsyncBaiduGeneralTranslator, AsyncBaiduFieldTranslator
 
 print(f"当前工作目录: {os.getcwd()}")
-async def async_translate_demo():
+async def async_translate_demo(args):
     """异步翻译演示"""
     print("=" * 50)
     print("  示例8: 百度异步翻译API (并发+限流)")
@@ -34,6 +35,8 @@ async def async_translate_demo():
     target_lang = os.getenv("TRANSLATE_TARGET", "en")
     source_lang = os.getenv("TRANSLATE_SOURCE", "auto")
     use_general = os.getenv("TRANSLATE_USE_GENERAL", "y").lower() == "y"
+    glossary_json = args.glossary_json or os.getenv("GLOSSARY_JSON")
+    glossary_file = args.glossary_file or os.getenv("GLOSSARY_FILE")
     
     # Fallback to input if not set
     if not oda_path:
@@ -78,12 +81,16 @@ async def async_translate_demo():
             requests_per_second=qps
         )
     
-    manager = TranslationManager(oda_path=oda_path)
+    manager = TranslationManager(
+        oda_path=oda_path,
+        glossary_json=glossary_json,
+        glossary_file=glossary_file,
+    )
     manager.set_translator(baidu)
     
     # 使用命令行参数指定文件，或使用默认
-    if len(sys.argv) > 1:
-        input_file = sys.argv[1]
+    if args.input_file:
+        input_file = args.input_file
     else:
         # 默认路径
         input_file = "data/lineweights.sample.dwg"
@@ -111,7 +118,14 @@ async def async_translate_demo():
 
 
 def main():
-    asyncio.run(async_translate_demo())
+    parser = argparse.ArgumentParser(description="Translate a DWG/DXF file with Baidu async API")
+    parser.add_argument("input_file", nargs="?", help="Input DWG/DXF file path")
+    parser.add_argument(
+        "--glossary-json",
+        help="Glossary terms as JSON list/object or comma-separated text, e.g. '[\"ODF\",\"PDU\"]'",
+    )
+    parser.add_argument("--glossary-file", help="Path to a glossary JSON file")
+    asyncio.run(async_translate_demo(parser.parse_args()))
 
 
 if __name__ == "__main__":

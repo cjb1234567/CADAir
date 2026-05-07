@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Optional, Dict, Any, Callable, List
 from .core import DWGCore
 from .extract import TextExtractor
+from .glossary import GlossaryInput, load_glossary
 from .writeback import TextWriter
 from .translator import TranslationEngine, MockTranslator
 from .translation_cache import get_shared_cache, TranslationCache
@@ -23,11 +24,19 @@ logger = logging.getLogger(__name__)
 class TranslationManager:
     """翻译流程管理器 - 整合所有模块，支持同步和异步翻译"""
     
-    def __init__(self, oda_path: str):
+    def __init__(self, oda_path: str,
+                 glossary: Optional[GlossaryInput] = None,
+                 glossary_json: Optional[str] = None,
+                 glossary_file: Optional[str] = None):
         self.core = DWGCore(oda_path)
         self.extractor = TextExtractor()
         self.writer = TextWriter()
         self.translator: Optional[TranslationEngine] = None
+        self.glossary = load_glossary(
+            glossary=glossary,
+            glossary_json=glossary_json,
+            glossary_file=glossary_file,
+        )
         self.doc = None
     
     def set_translator(self, translator: TranslationEngine):
@@ -150,7 +159,17 @@ class TranslationManager:
         
         for handle, data in bundles.items():
             content = data.get('plain_content') or data.get('content', '')
-            filter_result = should_translate_text(content, source_lang, target_lang)
+            fixed_translation = self.glossary.translation_for(content)
+            if fixed_translation is not None:
+                translated[handle] = {
+                    **data,
+                    'original': content,
+                    'translated': fixed_translation
+                }
+                logger.debug(f"词库固定翻译 [{handle}]: {content} -> {fixed_translation}")
+                continue
+
+            filter_result = should_translate_text(content, source_lang, target_lang, glossary=self.glossary.terms)
             if not filter_result.should_translate:
                 reason = filter_result.reason or 'filtered'
                 skipped[reason] = skipped.get(reason, 0) + 1
@@ -209,7 +228,17 @@ class TranslationManager:
         
         for handle, data in bundles.items():
             content = data.get('plain_content') or data.get('content', '')
-            filter_result = should_translate_text(content, source_lang, target_lang)
+            fixed_translation = self.glossary.translation_for(content)
+            if fixed_translation is not None:
+                translated[handle] = {
+                    **data,
+                    'original': content,
+                    'translated': fixed_translation
+                }
+                logger.debug(f"词库固定翻译 [{handle}]: {content} -> {fixed_translation}")
+                continue
+
+            filter_result = should_translate_text(content, source_lang, target_lang, glossary=self.glossary.terms)
             if not filter_result.should_translate:
                 reason = filter_result.reason or 'filtered'
                 skipped[reason] = skipped.get(reason, 0) + 1

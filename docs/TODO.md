@@ -1,14 +1,14 @@
 # CADAir TODO
 
-Last updated: 2026-05-06
+Last updated: 2026-05-07
 
 ## High Priority
 
-- [ ] Add a glossary/allowlist for CAD and electrical cabinet terms such as `ODF`, `PDU`, `CCU`, `ETH`, `RUN`, `ALM`, `PWR`, and cabinet IDs.
 - [ ] Split async translation logging into API request count and handle writeback count.
 
 ## Medium Priority
 
+- [ ] Normalize internal CJK spacing for glossary lookup so formatted CAD labels such as `运    行` can match `运行`.
 - [ ] Improve long translation layout handling.
 - [ ] Add optional text wrapping for `MTEXT` and `MULTILEADER` output.
 - [ ] Add width/height adaptation for translated `TEXT` where safe.
@@ -41,3 +41,7 @@ Last updated: 2026-05-06
 - [x] Supported non-roundtrip patch output for DXF input files, not only DWG input.
 - [x] Added pre-API translation filtering for non-translatable CAD labels, including numbers, dimensions, page numbers, equipment slot labels, target-language text, and uppercase technical abbreviations.
 - [x] Verified filtering with `.venv/bin/python -m unittest tests.test_translation_filter` and a full Baidu async run on `data/20260123.dwg`.
+- [x] Added configurable glossary/allowlist loading from direct parameters, JSON text, JSON files, `.env`, and async example CLI arguments.
+- [x] Added fixed glossary translations that are applied before cache lookup, filtering, and API calls.
+- [x] Added direction-named zh-to-en glossary config at `config/cad_glossary_zh-en.json`.
+- [x] Verified `examples/baidu_async_translate.py` with `--glossary-file config/cad_glossary_zh-en.json`, producing `data/20260123_translated_translated.dxf` with `327/327` direct patch writebacks.

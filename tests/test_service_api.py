@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import tempfile
 import unittest
@@ -100,6 +101,21 @@ class TestServiceApi(unittest.TestCase):
         self.assertFalse(body["ok"])
         self.assertEqual(body["error"]["code"], "file_not_found")
 
+    def test_run_accepts_cadair_upload_root_default(self):
+        upload_root = self.tmp_path / "configured_uploads"
+        upload_root.mkdir()
+        input_path = upload_root / "missing.dxf"
+        environ = dict(os.environ)
+        environ["CADAIR_UPLOAD_ROOT"] = str(upload_root)
+        environ.pop("CADAIR_ALLOWED_INPUT_ROOTS", None)
+        with patch.dict("os.environ", environ, clear=True):
+            response = self.client.post("/v1/run", json=self.payload(input_path))
+
+        self.assertEqual(response.status_code, 200)
+        body = response.json()
+        self.assertFalse(body["ok"])
+        self.assertEqual(body["error"]["code"], "file_not_found")
+
     def test_run_rejects_unsupported_extension(self):
         pdf = self.upload_root / "input.pdf"
         pdf.write_text("not cad", encoding="utf-8")
@@ -138,6 +154,21 @@ class TestServiceApi(unittest.TestCase):
         self.assertTrue(result["ok"])
         self.assertEqual(manifest["app_id"], "cadair_translate")
         self.assertEqual(manifest["request_id"], "req_test_001")
+        self.assertEqual(manifest["files"], [item for item in body["files"] if item["path"] != str(manifest_path)])
+
+    def test_run_resolves_relative_output_root_to_absolute_response_paths(self):
+        input_path = self.upload_root / "simple_case.oda.dxf"
+        shutil.copyfile(DATA_DIR / "simple_case.oda.dxf", input_path)
+        relative_output_root = self.tmp_path.relative_to(ROOT_DIR) / "relative-deliveries" / "apps"
+
+        with patch.dict("os.environ", {"CADAIR_OUTPUT_ROOT": str(relative_output_root)}, clear=False):
+            response = self.client.post("/v1/run", json=self.payload(input_path))
+
+        self.assertEqual(response.status_code, 200)
+        body = response.json()
+        self.assertTrue(body["ok"], body)
+        for item in body["files"]:
+            self.assertTrue(Path(item["path"]).is_absolute(), item)
 
 
 if __name__ == "__main__":

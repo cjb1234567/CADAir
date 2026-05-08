@@ -60,12 +60,13 @@ def allowed_input_roots() -> list[Path]:
     if value:
         roots = [item.strip() for item in value.split(",") if item.strip()]
     else:
-        roots = ["/data/uploads", "/data/document-intelligence", "/data/deliveries"]
+        upload_root = env("CADAIR_UPLOAD_ROOT", "/data/uploads") or "/data/uploads"
+        roots = [upload_root, "/data/document-intelligence", "/data/deliveries"]
     return [Path(root).expanduser().resolve(strict=False) for root in roots]
 
 
 def output_root() -> Path:
-    return Path(env("CADAIR_OUTPUT_ROOT", "/data/deliveries/apps") or "/data/deliveries/apps").expanduser()
+    return Path(env("CADAIR_OUTPUT_ROOT", "/data/deliveries/apps") or "/data/deliveries/apps").expanduser().resolve(strict=False)
 
 
 def sanitize_component(value: str, fallback: str) -> str:

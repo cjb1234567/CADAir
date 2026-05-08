@@ -307,19 +307,19 @@ CADAir includes a FastAPI HTTP service for AI platform integration. The current 
 Run the service locally:
 
 ```bash
-uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8101
+uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8030
 ```
 
 Health check:
 
 ```bash
-curl http://127.0.0.1:8101/health
+curl http://127.0.0.1:8030/health
 ```
 
 Synchronous translation request:
 
 ```bash
-curl -X POST http://127.0.0.1:8101/v1/run \
+curl -X POST http://127.0.0.1:8030/v1/run \
   -H 'Content-Type: application/json' \
   -d '{
     "request_id": "req_001",

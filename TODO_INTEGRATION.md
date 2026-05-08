@@ -18,7 +18,7 @@ Reference standards:
 - App ID: `cadair_translate`.
 - Skill ID: `cadair_translate`.
 - Service name: `cadair-translate-service`.
-- Default port: `8101`.
+- Default port: `8030`.
 - Upload input root: `/data/uploads`.
 - Additional read-only input roots: `/data/document-intelligence`, `/data/deliveries`.
 - Delivery output root: `/data/deliveries/apps`.
@@ -261,8 +261,8 @@ Notes:
 - [ ] Mount `/data/document-intelligence` read-only if used.
 - [ ] Mount `/data/deliveries` read-write.
 - [ ] Mount platform config or glossary directory read-only.
-- [ ] Expose port `8101`.
-- [ ] Start with `uvicorn cadair.service:app --host 0.0.0.0 --port 8101`.
+- [ ] Expose port `8030`.
+- [ ] Start with `uvicorn cadair.service:app --host 0.0.0.0 --port 8030`.
 
 ## App Integration Directory Tasks
 
@@ -376,8 +376,8 @@ app-integrations/
 uv run pytest tests/test_service_api.py
 uv run pytest tests/test_simple_case_regression.py
 uv run pytest tests/test_translation_filter.py
-uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8101
-curl http://localhost:8101/health
+uv run uvicorn cadair.service:app --host 0.0.0.0 --port 8030
+curl http://localhost:8030/health
 ```
 
 ## HTTP Service V1 Validation Notes
@@ -413,7 +413,7 @@ Docker validation:
 ```bash
 docker compose build
 docker compose up
-curl http://localhost:8101/health
+curl http://localhost:8030/health
 ```
 
 ## First Version Boundaries

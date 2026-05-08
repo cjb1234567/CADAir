@@ -39,9 +39,9 @@ Reference standards:
 - [x] Add structured service logs with `request_id`, `user_id`, `skill_id`, `stage`, `duration_ms`, `status`, and `error_code`.
 - [x] Add tests for `/health`, invalid input, missing file, path rejection, and mock DXF success flow.
 - [ ] Add `Dockerfile` and root `docker-compose.yml` for local service runs.
-- [ ] Add `.env.example` without real secrets.
+- [x] Add `.env.example` without real secrets.
 - [ ] Add `app-integrations/cadair-translate/` maintenance directory.
-- [ ] Update `README.md` with service and Docker usage.
+- [ ] Update `README.md` with Docker usage. Service usage is documented.
 
 ## API Contract
 
@@ -366,7 +366,7 @@ app-integrations/
 - [x] Unit test `/v1/run` rejects paths outside allowed roots.
 - [x] Unit test `/v1/run` returns `file_not_found` for missing allowed path.
 - [x] Unit test `/v1/run` succeeds with `tests/data/simple_case.oda.dxf` copied or mounted under an allowed test upload root and `engine=mock`.
-- [ ] Unit test request-level `params.glossary_json` fixed translation behavior.
+- [x] Unit test request-level `params.glossary_json` fixed translation behavior.
 - [x] Unit test outputs are written under the configured delivery root.
 - [x] Keep existing regression tests: `tests.test_simple_case_regression` and `tests.test_translation_filter`.
 

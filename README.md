@@ -34,7 +34,7 @@ A Python tool for **DWG → JSON conversion** and **DWG/DXF text translation** u
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.13+
 - [uv](https://docs.astral.sh/uv/) for dependency management (or pip)
 - ODA File Converter (for DWG support, see below)
 

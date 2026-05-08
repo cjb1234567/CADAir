@@ -304,6 +304,31 @@ Raw DXF reads and writes use lightweight header-based encoding detection. R2007+
 
 CADAir includes a FastAPI HTTP service for AI platform integration. The current integration plan and remaining packaging work are tracked in [TODO_INTEGRATION.md](TODO_INTEGRATION.md).
 
+Run the service with Docker Compose:
+
+```bash
+cp .env.example .env
+mkdir -p data/uploads data/document-intelligence data/deliveries secret/oda
+docker compose build
+docker compose up
+```
+
+The root `docker-compose.yml` exposes `8030` and mounts platform-style paths:
+
+- `./data/uploads` -> `/data/uploads:ro`
+- `./data/document-intelligence` -> `/data/document-intelligence:ro`
+- `./data/deliveries` -> `/data/deliveries:rw`
+- `./config` -> `/data/config:ro`
+- `./secret/oda` -> `/opt/oda:ro`
+
+Do not commit real Baidu credentials, customer CAD files, or ODA binaries. For DWG support in the container, place the ODA AppImage outside git at `secret/oda/ODAFileConverter.AppImage`, make it executable on the host, and keep `ODA_PATH=/opt/oda/ODAFileConverter.AppImage` in the container environment. DXF-only smoke tests can use `engine=mock` without ODA.
+
+Docker health check:
+
+```bash
+curl http://127.0.0.1:8030/health
+```
+
 Run the service locally:
 
 ```bash
@@ -323,20 +348,21 @@ curl -X POST http://127.0.0.1:8030/v1/run \
   -H 'Content-Type: application/json' \
   -d '{
     "request_id": "req_001",
+    "user_id": "user_001",
     "skill_id": "cadair_translate",
     "input": {
       "files": [
         {"path": "/data/uploads/input.dwg", "filename": "input.dwg"}
-      ]
+      ],
+      "params": {
+        "engine": "baidu_general",
+        "source": "zh",
+        "target": "en",
+        "layout_check": true,
+        "shrink": true
+      }
     },
-    "params": {
-      "engine": "baidu_general",
-      "source": "zh",
-      "target": "en",
-      "layout_check": true,
-      "shrink": true
-    },
-    "context": {"user_id": "user_001"}
+    "context": {"source": "portal"}
   }'
 ```
 
@@ -348,7 +374,7 @@ The service contract follows the internal Python application standards in `docs/
 - CADAir returns output file paths to Gateway; Gateway owns OneDrive delivery.
 - Request-level glossary configuration should use `params.glossary_json` or `params.glossary_file`.
 
-The first HTTP service version is intentionally synchronous and exposes only `GET /health` and `POST /v1/run`. Async jobs, Docker packaging, and Gateway app metadata are tracked as follow-up integration tasks.
+The first HTTP service version is intentionally synchronous and exposes only `GET /health` and `POST /v1/run`. Async jobs and Gateway app metadata are tracked as follow-up integration tasks.
 
 Relevant environment variables:
 

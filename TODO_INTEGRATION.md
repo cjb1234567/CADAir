@@ -1,6 +1,6 @@
 # CADAir Integration TODO
 
-Last updated: 2026-05-07
+Last updated: 2026-05-08
 
 ## Goal
 
@@ -38,10 +38,10 @@ Reference standards:
 - [x] Write `result.json` and `manifest.json` for each request.
 - [x] Add structured service logs with `request_id`, `user_id`, `skill_id`, `stage`, `duration_ms`, `status`, and `error_code`.
 - [x] Add tests for `/health`, invalid input, missing file, path rejection, and mock DXF success flow.
-- [ ] Add `Dockerfile` and root `docker-compose.yml` for local service runs.
+- [x] Add `Dockerfile` and root `docker-compose.yml` for local service runs.
 - [x] Add `.env.example` without real secrets.
-- [ ] Add `app-integrations/cadair-translate/` maintenance directory.
-- [ ] Update `README.md` with Docker usage. Service usage is documented.
+- [ ] Add `app-integrations/cadair-translate/` maintenance directory. Verified missing on 2026-05-08.
+- [x] Update `README.md` with Docker usage.
 
 ## API Contract
 
@@ -254,15 +254,15 @@ Notes:
 
 ## Docker Tasks
 
-- [ ] Use `python:3.13-slim` because `pyproject.toml` currently requires Python `>=3.13`.
-- [ ] Install runtime libraries needed by ODA on Linux, including `xvfb`, `libgl1`, and `libglib2.0-0`.
-- [ ] Do not copy real ODA binaries or secrets into the image.
-- [ ] Mount `/data/uploads` read-only.
-- [ ] Mount `/data/document-intelligence` read-only if used.
-- [ ] Mount `/data/deliveries` read-write.
-- [ ] Mount platform config or glossary directory read-only.
-- [ ] Expose port `8030`.
-- [ ] Start with `uvicorn cadair.service:app --host 0.0.0.0 --port 8030`.
+- [x] Use `python:3.13-slim` because `pyproject.toml` currently requires Python `>=3.13`.
+- [x] Install runtime libraries needed by ODA on Linux, including `xvfb`, `libgl1`, and `libglib2.0-0`.
+- [x] Do not copy real ODA binaries or secrets into the image.
+- [x] Mount `/data/uploads` read-only.
+- [x] Mount `/data/document-intelligence` read-only if used.
+- [x] Mount `/data/deliveries` read-write.
+- [x] Mount platform config or glossary directory read-only.
+- [x] Expose port `8030`.
+- [x] Start with `uvicorn cadair.service:app --host 0.0.0.0 --port 8030`.
 
 ## App Integration Directory Tasks
 

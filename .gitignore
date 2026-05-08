@@ -5,7 +5,6 @@ build/
 dist/
 wheels/
 *.egg-info
-secret
 
 # Virtual environments
 .venv
@@ -28,9 +27,24 @@ data/*
 !data/*.sample.dwg
 !data/*.sample.dxf
 !data/.gitkeep
+!data/uploads/
+data/uploads/*
+!data/uploads/.gitkeep
+!data/document-intelligence/
+data/document-intelligence/*
+!data/document-intelligence/.gitkeep
+!data/deliveries/
+data/deliveries/*
+!data/deliveries/.gitkeep
+!data/deliveries/apps/
+data/deliveries/apps/*
 
 # ODA File Converter AppImage
 *.AppImage
+secret/*
+!secret/oda/
+secret/oda/*
+!secret/oda/.gitkeep
 
 # Log files
 *.log
